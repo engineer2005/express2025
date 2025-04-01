@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    document.title = 'express - Public Speaking and Debating Committee';
+    document.title = 'eXpress - Public Speaking and Debating Committee';
   }, []);
 
   return (

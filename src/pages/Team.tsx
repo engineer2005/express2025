@@ -5,7 +5,7 @@ import { Mail, Linkedin, Instagram } from 'lucide-react';
 
 const Team: React.FC = () => {
   useEffect(() => {
-    document.title = 'Team - express';
+    document.title = 'Team - eXpress';
   }, []);
 
   // Core team
@@ -31,13 +31,13 @@ const Team: React.FC = () => {
   // Departments
   const departments = [
     {
-      name: "Treasury",
+      name: "Treasurer",
       members: [
         { name: "Devanshi Shah", role: "Treasurer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
-      name: "Secretarial",
+      name: "Secretaries",
       members: [
         { name: "Neeraja Shah", role: "Secretary", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
         { name: "Harshil Raval", role: "Secretary", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
@@ -161,7 +161,7 @@ const Team: React.FC = () => {
           {/* Department Heads */}
           {departments.map((dept, index) => (
             <div className="mb-16" key={index}>
-              <h2 className="text-center text-2xl font-playfair text-express-light mb-6">{dept.name} Department</h2>
+              <h2 className="text-center text-2xl font-playfair text-express-light mb-6">{dept.name}</h2>
               <div className={`grid grid-cols-1 ${dept.members.length > 1 ? 'md:grid-cols-2' : ''} gap-8 max-w-2xl mx-auto`}>
                 {dept.members.map((member, memberIndex) => (
                   <MemberCard key={memberIndex} member={member} />
