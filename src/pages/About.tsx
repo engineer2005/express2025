@@ -60,12 +60,12 @@ const About: React.FC = () => {
           <div className="space-y-8 mt-8">
             <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
               <div className="md:flex">
-                <div className="md:w-1/3 bg-black/20">
-                  <div className="h-full flex items-center justify-center p-6">
-                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-express-purple/20 flex items-center justify-center transform transition-transform group-hover:scale-110">
-                      <span className="text-4xl md:text-5xl font-playfair text-express-purple">DJS</span>
-                    </div>
-                  </div>
+                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
+                  <img 
+                    src="/lovable-uploads/936c80f5-b8a7-4e1f-b6d7-bb87d8237ba0.png" 
+                    alt="What are we" 
+                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
+                  />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
                   <div className="flex items-start gap-3 mb-4">
@@ -83,15 +83,12 @@ const About: React.FC = () => {
             
             <Card className="overflow-hidden border-none bg-gradient-to-l from-black/40 to-black/60 backdrop-blur-sm">
               <div className="md:flex flex-row-reverse">
-                <div className="md:w-1/3 bg-black/20">
-                  <div className="h-full flex items-center justify-center p-6">
-                    <div className="relative">
-                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-express-purple/20 absolute -top-2 -left-2 animate-pulse-slow"></div>
-                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-express-purple/30 relative z-10 flex items-center justify-center">
-                        <span className="text-3xl md:text-4xl font-playfair text-express-purple">eX</span>
-                      </div>
-                    </div>
-                  </div>
+                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
+                  <img 
+                    src="/lovable-uploads/3a4458fd-e2ff-4280-9c61-2e5e820a4e3f.png" 
+                    alt="What do we do" 
+                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
+                  />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
                   <div className="flex items-start gap-3 mb-4">
@@ -109,15 +106,12 @@ const About: React.FC = () => {
             
             <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
               <div className="md:flex">
-                <div className="md:w-1/3 bg-black/20">
-                  <div className="h-full flex items-center justify-center p-6">
-                    <div className="relative">
-                      <div className="w-28 h-28 md:w-36 md:h-36 bg-black/40 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-express-purple/20"></div>
-                      <div className="w-20 h-20 md:w-28 md:h-28 bg-black/60 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-express-purple/40 flex items-center justify-center">
-                        <span className="text-xl md:text-2xl font-playfair text-express-purple -rotate-45">Why Us?</span>
-                      </div>
-                    </div>
-                  </div>
+                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
+                  <img 
+                    src="/lovable-uploads/9b940661-2387-4886-9524-a60ac9df112a.png" 
+                    alt="Why choose us" 
+                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
+                  />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
                   <div className="flex items-start gap-3 mb-4">
