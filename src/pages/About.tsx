@@ -1,43 +1,130 @@
 
 import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
+import { useIsMobile } from '../hooks/use-mobile';
+import { Card, CardContent } from '../components/ui/card';
+import { Users, Globe, BookOpen } from 'lucide-react';
 
 const About: React.FC = () => {
   useEffect(() => {
     document.title = 'About Us - express';
   }, []);
+  
+  const isMobile = useIsMobile();
 
   return (
     <>
       <ParticleBackground />
-      <div className="relative min-h-screen pt-24 pb-16 px-6 z-10">
+      <div className="relative min-h-screen pt-24 pb-16 px-4 md:px-6 z-10">
         <div className="container mx-auto max-w-5xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-express-purple mb-8 text-center font-playfair">
-            About Us
-          </h1>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-express-purple mb-4 font-playfair animate-fade-in">
+              About Us
+            </h1>
+            <div className="h-1 w-24 md:w-32 bg-express-purple mx-auto rounded-full"></div>
+          </div>
           
-          <div className="space-y-12 mt-8">
-            <section className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-8 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10">
-              <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What are we?</h2>
-              <p className="text-gray-300 leading-relaxed">
-                DJS eXpress is the official public speaking committee of DJ Sanghvi College of Engineering where we organize public speaking and debating events. We have organised many successful events in the past like illuminare and our flagship event, aryavarta which have been received with a lot of support and appreciation from the students and faculty of the college. What sets eXpress apart is the consistency and the sheer enthusiasm with which each member works which makes our events successful and make us highly coveted.
-              </p>
-            </section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+              <div className="flex flex-col items-center">
+                <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
+                  <Users size={isMobile ? 32 : 40} className="text-express-purple" />
+                </div>
+                <h3 className="text-xl font-semibold text-express-purple mb-2">Our Community</h3>
+                <p className="text-gray-300 text-center">A vibrant community of passionate debaters and public speakers from DJ Sanghvi College of Engineering.</p>
+              </div>
+            </div>
             
-            <section className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-8 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10">
-              <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What do we do?</h2>
-              <p className="text-gray-300 leading-relaxed">
-                At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us entire process is a learning experience.
-              </p>
-            </section>
+            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+              <div className="flex flex-col items-center">
+                <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
+                  <Globe size={isMobile ? 32 : 40} className="text-express-purple" />
+                </div>
+                <h3 className="text-xl font-semibold text-express-purple mb-2">Our Reach</h3>
+                <p className="text-gray-300 text-center">The largest audiences and highest participant registrations across college events in the city.</p>
+              </div>
+            </div>
             
-            <section className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-8 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10">
-              <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">Why choose us?</h2>
-              <p className="text-gray-300 leading-relaxed">
-                As the official public speaking and debating committee of DJSCE, we are dedicated to organizing impactful and intellectually stimulating events, including debates, oration competitions, quizzes, group discussions, and much more. Our events are designed to challenge, inspire, and refine the skills of participants, ensuring an unparalleled experience.<br /><br />
-                What sets eXpress apart is our unmatched reach and engagement. With the largest audiences and highest participant registrations, we have built a reputation for exceptional publicity and unique event concepts that captivate students across the city. Our committee consists of the brightest minds in college, ensuring a platform where only the most thought-provoking discussions and innovative ideas thrive.
-              </p>
-            </section>
+            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+              <div className="flex flex-col items-center">
+                <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
+                  <BookOpen size={isMobile ? 32 : 40} className="text-express-purple" />
+                </div>
+                <h3 className="text-xl font-semibold text-express-purple mb-2">Our Mission</h3>
+                <p className="text-gray-300 text-center">To unlock the potential of every student through public speaking, critical thinking, and confident self-expression.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-8 mt-8">
+            <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
+              <div className="md:flex">
+                <div className="md:w-1/3 bg-black/20">
+                  <div className="h-full flex items-center justify-center p-6">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-express-purple/20 flex items-center justify-center transform transition-transform group-hover:scale-110">
+                      <span className="text-4xl md:text-5xl font-playfair text-express-purple">DJS</span>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="md:w-2/3 p-6">
+                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What are we?</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    DJS eXpress is the official public speaking committee of DJ Sanghvi College of Engineering where we organize public speaking and debating events. We have organised many successful events in the past like illuminare and our flagship event, aryavarta which have been received with a lot of support and appreciation from the students and faculty of the college. What sets eXpress apart is the consistency and the sheer enthusiasm with which each member works which makes our events successful and make us highly coveted.
+                  </p>
+                </CardContent>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden border-none bg-gradient-to-l from-black/40 to-black/60 backdrop-blur-sm">
+              <div className="md:flex flex-row-reverse">
+                <div className="md:w-1/3 bg-black/20">
+                  <div className="h-full flex items-center justify-center p-6">
+                    <div className="relative">
+                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-express-purple/20 absolute -top-2 -left-2 animate-pulse-slow"></div>
+                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-express-purple/30 relative z-10 flex items-center justify-center">
+                        <span className="text-3xl md:text-4xl font-playfair text-express-purple">eX</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="md:w-2/3 p-6">
+                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What do we do?</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us entire process is a learning experience.
+                  </p>
+                </CardContent>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
+              <div className="md:flex">
+                <div className="md:w-1/3 bg-black/20">
+                  <div className="h-full flex items-center justify-center p-6">
+                    <div className="relative">
+                      <div className="w-28 h-28 md:w-36 md:h-36 bg-black/40 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-express-purple/20"></div>
+                      <div className="w-20 h-20 md:w-28 md:h-28 bg-black/60 rotate-45 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-express-purple/40 flex items-center justify-center">
+                        <span className="text-xl md:text-2xl font-playfair text-express-purple -rotate-45">Why Us?</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="md:w-2/3 p-6">
+                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">Why choose us?</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    As the official public speaking and debating committee of DJSCE, we are dedicated to organizing impactful and intellectually stimulating events, including debates, oration competitions, quizzes, group discussions, and much more. Our events are designed to challenge, inspire, and refine the skills of participants, ensuring an unparalleled experience.
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mt-4">
+                    What sets eXpress apart is our unmatched reach and engagement. With the largest audiences and highest participant registrations, we have built a reputation for exceptional publicity and unique event concepts that captivate students across the city. Our committee consists of the brightest minds in college, ensuring a platform where only the most thought-provoking discussions and innovative ideas thrive.
+                  </p>
+                </CardContent>
+              </div>
+            </Card>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="inline-block bg-express-purple/20 text-express-light px-6 py-3 rounded-full border border-express-purple/30 animate-float">
+              Join us in our journey of intellectual growth and public speaking excellence!
+            </p>
           </div>
         </div>
       </div>
