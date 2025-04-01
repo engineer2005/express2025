@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Card, CardContent } from '../components/ui/card';
-import { Users, Globe, BookOpen } from 'lucide-react';
+import { Users, Globe, BookOpen, School, Speech, Award, Lightbulb, MessageSquare } from 'lucide-react';
+import { Avatar } from '../components/ui/avatar';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -67,7 +68,12 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <CardContent className="md:w-2/3 p-6">
-                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What are we?</h2>
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
+                      <School className="text-express-purple h-5 w-5" />
+                    </div>
+                    <h2 className="text-2xl font-playfair font-semibold text-express-purple">What are we?</h2>
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     DJS eXpress is the official public speaking committee of DJ Sanghvi College of Engineering where we organize public speaking and debating events. We have organised many successful events in the past like illuminare and our flagship event, aryavarta which have been received with a lot of support and appreciation from the students and faculty of the college. What sets eXpress apart is the consistency and the sheer enthusiasm with which each member works which makes our events successful and make us highly coveted.
                   </p>
@@ -88,7 +94,12 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <CardContent className="md:w-2/3 p-6">
-                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">What do we do?</h2>
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
+                      <Speech className="text-express-purple h-5 w-5" />
+                    </div>
+                    <h2 className="text-2xl font-playfair font-semibold text-express-purple">What do we do?</h2>
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us entire process is a learning experience.
                   </p>
@@ -109,20 +120,31 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <CardContent className="md:w-2/3 p-6">
-                  <h2 className="text-2xl font-playfair font-semibold text-express-purple mb-4">Why choose us?</h2>
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
+                      <Award className="text-express-purple h-5 w-5" />
+                    </div>
+                    <h2 className="text-2xl font-playfair font-semibold text-express-purple">Why choose us?</h2>
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     As the official public speaking and debating committee of DJSCE, we are dedicated to organizing impactful and intellectually stimulating events, including debates, oration competitions, quizzes, group discussions, and much more. Our events are designed to challenge, inspire, and refine the skills of participants, ensuring an unparalleled experience.
                   </p>
-                  <p className="text-gray-300 leading-relaxed mt-4">
-                    What sets eXpress apart is our unmatched reach and engagement. With the largest audiences and highest participant registrations, we have built a reputation for exceptional publicity and unique event concepts that captivate students across the city. Our committee consists of the brightest minds in college, ensuring a platform where only the most thought-provoking discussions and innovative ideas thrive.
-                  </p>
+                  <div className="flex items-start gap-3 mt-4">
+                    <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
+                      <Lightbulb className="text-express-purple h-5 w-5" />
+                    </div>
+                    <p className="text-gray-300 leading-relaxed">
+                      What sets eXpress apart is our unmatched reach and engagement. With the largest audiences and highest participant registrations, we have built a reputation for exceptional publicity and unique event concepts that captivate students across the city. Our committee consists of the brightest minds in college, ensuring a platform where only the most thought-provoking discussions and innovative ideas thrive.
+                    </p>
+                  </div>
                 </CardContent>
               </div>
             </Card>
           </div>
           
           <div className="mt-12 text-center">
-            <p className="inline-block bg-express-purple/20 text-express-light px-6 py-3 rounded-full border border-express-purple/30 animate-float">
+            <p className="inline-flex items-center gap-2 bg-express-purple/20 text-express-light px-6 py-3 rounded-full border border-express-purple/30 animate-float">
+              <MessageSquare className="h-5 w-5 text-express-purple" />
               Join us in our journey of intellectual growth and public speaking excellence!
             </p>
           </div>
