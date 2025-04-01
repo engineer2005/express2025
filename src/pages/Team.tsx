@@ -1,7 +1,6 @@
 
 import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
-import { Mail, Linkedin, Instagram } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Team: React.FC = () => {
@@ -95,7 +94,7 @@ const Team: React.FC = () => {
     {
       name: "Technical",
       members: [
-        { name: "Pearly Mody", role: "Technical Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Pearl Mody", role: "Technical Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
@@ -106,7 +105,7 @@ const Team: React.FC = () => {
     }
   ];
 
-  // Member card component 
+  // Member card component - removed social media icons
   const MemberCard = ({ member }) => (
     <div className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10 group">
       <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-express-purple/50 group-hover:border-express-purple transition-all">
@@ -114,18 +113,6 @@ const Team: React.FC = () => {
       </div>
       <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
       <p className="text-express-purple mt-1">{member.role}</p>
-      
-      <div className="flex space-x-3 mt-4">
-        <button className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors">
-          <Mail size={16} />
-        </button>
-        <button className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors">
-          <Instagram size={16} />
-        </button>
-        <button className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors">
-          <Linkedin size={16} />
-        </button>
-      </div>
     </div>
   );
 
