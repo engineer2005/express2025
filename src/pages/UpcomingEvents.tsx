@@ -28,7 +28,7 @@ const UpcomingEvents: React.FC = () => {
                       <img src="public/lovable-uploads/d1d52eab-5f8d-41ec-b5c2-cb078da55802.png" alt="The Big Bang Theory" className="object-cover w-full h-full" />
                       <img src="public/lovable-uploads/05a9ed0f-9b54-4019-9e1d-a0844be0c83f.png" alt="How I Met Your Mother" className="object-cover w-full h-full" />
                       <img src="public/lovable-uploads/3a4458fd-e2ff-4280-9c61-2e5e820a4e3f.png" alt="Modern Family" className="object-cover w-full h-full" />
-                      <img src="https://m.media-amazon.com/images/M/MV5BMzg0NGE0N2MtYTg1My00NTBkLWI5NjEtZTgyMDA0MTU4MmIyXkEyXkFqcGdeQXVyMTU2Mjg2NjE2._V1_.jpg" alt="The Office" className="object-cover w-full h-full" />
+                      <img src="public/lovable-uploads/ea914202-e33b-4485-9224-4785401b2584.png" alt="Friends" className="object-cover w-full h-full" />
                     </div>
                   </div>
                 </div>

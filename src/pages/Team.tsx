@@ -12,19 +12,19 @@ const Team: React.FC = () => {
   const chairperson = {
     name: "Aniket Prasad",
     role: "Chairperson",
-    image: "public/lovable-uploads/32ed3402-7bd7-49d2-8d27-cd73473fac46.png", // Aniket image
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
   };
   
   const viceChairpersons = [
     {
       name: "Kevin Savla",
       role: "Vice Chairperson",
-      image: "public/lovable-uploads/a85a5c3b-68fb-4813-8b61-fcd569c6c074.png", // Kevin image
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
     },
     {
       name: "Kriish Chheda",
       role: "Vice Chairperson",
-      image: "public/lovable-uploads/ce616e54-7ce1-4952-9fa7-0946d8556615.png", // Kriish image
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
     }
   ];
   
@@ -33,74 +33,74 @@ const Team: React.FC = () => {
     {
       name: "Treasurer",
       members: [
-        { name: "Devanshi Shah", role: "Treasurer", image: "public/lovable-uploads/f5505576-529f-45c5-b28e-9a6351ca213a.png" } // Devanshi image
+        { name: "Devanshi Shah", role: "Treasurer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
       ]
     },
     {
       name: "Secretaries",
       members: [
-        { name: "Neeraja Shah", role: "Secretary", image: "public/lovable-uploads/e565983b-b02e-4d72-9882-de3ad8c01b13.png" }, // Neeraja image
-        { name: "Harshil Raval", role: "Secretary", image: "public/lovable-uploads/936c80f5-b8a7-4e1f-b6d7-bb87d8237ba0.png" } // Harshil image
+        { name: "Neeraja Shah", role: "Secretary", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
+        { name: "Harshil Raval", role: "Secretary", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
       ]
     },
     {
       name: "Events",
       members: [
-        { name: "Ananya Patel", role: "Events Head", image: "public/lovable-uploads/9b940661-2387-4886-9524-a60ac9df112a.png" }, // Ananya image
-        { name: "Rushabh Shah", role: "Events Head", image: "public/lovable-uploads/3413d3c5-621f-41b1-aaa0-fe601aa47bc6.png" } // Rushabh image
+        { name: "Ananya Patel", role: "Events Head", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
+        { name: "Rushabh Shah", role: "Events Head", image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
       ]
     },
     {
       name: "Publicity",
       members: [
-        { name: "Harshil Bhanushali", role: "Publicity Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Chhavi Rathod", role: "Publicity Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Harshil Bhanushali", role: "Publicity Head", image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
+        { name: "Chhavi Rathod", role: "Publicity Head", image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Creatives",
       members: [
-        { name: "Disha Shetty", role: "Creatives Head", image: "public/lovable-uploads/0b0d5dd9-9dfe-4a61-bbb5-0979d1a53df7.png" }, // Disha image
-        { name: "Shalmalee Thakur", role: "Creatives Head", image: "public/lovable-uploads/8326593d-8aac-416d-8991-3559955179d2.png" } // Shalmalee image
+        { name: "Disha Shetty", role: "Creatives Head", image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
+        { name: "Shalmalee Thakur", role: "Creatives Head", image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
       ]
     },
     {
       name: "Operations",
       members: [
-        { name: "Anmol Santwani", role: "Operations Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Dhruv Singhania", role: "Operations Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Anmol Santwani", role: "Operations Head", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
+        { name: "Dhruv Singhania", role: "Operations Head", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Marketing",
       members: [
-        { name: "Dhairya Dharod", role: "Marketing Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Atharva Kismatrao", role: "Marketing Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Dhairya Dharod", role: "Marketing Head", image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
+        { name: "Atharva Kismatrao", role: "Marketing Head", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Journalism",
       members: [
-        { name: "Ibrahim Kothari", role: "Journalism Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Jash Sheth", role: "Journalism Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Ibrahim Kothari", role: "Journalism Head", image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
+        { name: "Jash Sheth", role: "Journalism Head", image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Editorial",
       members: [
-        { name: "Hardik lyer", role: "Editorial Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Hardik lyer", role: "Editorial Head", image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Technical",
       members: [
-        { name: "Pearl Mody", role: "Technical Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Pearl Mody", role: "Technical Head", image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     },
     {
       name: "Production",
       members: [
-        { name: "Krishna Naudiyal", role: "Production Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Krishna Naudiyal", role: "Production Head", image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
       ]
     }
   ];
