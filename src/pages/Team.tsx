@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { Mail, Linkedin, Instagram } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Team: React.FC = () => {
   useEffect(() => {
@@ -12,19 +13,19 @@ const Team: React.FC = () => {
   const chairperson = {
     name: "Aniket Prasad",
     role: "Chairperson",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+    image: "public/lovable-uploads/32ed3402-7bd7-49d2-8d27-cd73473fac46.png", // Aniket image
   };
   
   const viceChairpersons = [
     {
       name: "Kevin Savla",
       role: "Vice Chairperson",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      image: "public/lovable-uploads/a85a5c3b-68fb-4813-8b61-fcd569c6c074.png", // Kevin image
     },
     {
       name: "Kriish Chheda",
       role: "Vice Chairperson",
-      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      image: "public/lovable-uploads/ce616e54-7ce1-4952-9fa7-0946d8556615.png", // Kriish image
     }
   ];
   
@@ -33,21 +34,21 @@ const Team: React.FC = () => {
     {
       name: "Treasurer",
       members: [
-        { name: "Devanshi Shah", role: "Treasurer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Devanshi Shah", role: "Treasurer", image: "public/lovable-uploads/f5505576-529f-45c5-b28e-9a6351ca213a.png" } // Devanshi image
       ]
     },
     {
       name: "Secretaries",
       members: [
-        { name: "Neeraja Shah", role: "Secretary", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Harshil Raval", role: "Secretary", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Neeraja Shah", role: "Secretary", image: "public/lovable-uploads/e565983b-b02e-4d72-9882-de3ad8c01b13.png" }, // Neeraja image
+        { name: "Harshil Raval", role: "Secretary", image: "public/lovable-uploads/936c80f5-b8a7-4e1f-b6d7-bb87d8237ba0.png" } // Harshil image
       ]
     },
     {
       name: "Events",
       members: [
-        { name: "Ananya Patel", role: "Events Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Rushabh Shah", role: "Events Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Ananya Patel", role: "Events Head", image: "public/lovable-uploads/9b940661-2387-4886-9524-a60ac9df112a.png" }, // Ananya image
+        { name: "Rushabh Shah", role: "Events Head", image: "public/lovable-uploads/3413d3c5-621f-41b1-aaa0-fe601aa47bc6.png" } // Rushabh image
       ]
     },
     {
@@ -60,8 +61,8 @@ const Team: React.FC = () => {
     {
       name: "Creatives",
       members: [
-        { name: "Disha Shetty", role: "Creatives Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Shalmalee Thakur", role: "Creatives Head", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Disha Shetty", role: "Creatives Head", image: "public/lovable-uploads/0b0d5dd9-9dfe-4a61-bbb5-0979d1a53df7.png" }, // Disha image
+        { name: "Shalmalee Thakur", role: "Creatives Head", image: "public/lovable-uploads/8326593d-8aac-416d-8991-3559955179d2.png" } // Shalmalee image
       ]
     },
     {
