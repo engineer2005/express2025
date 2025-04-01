@@ -18,12 +18,12 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
       <div className={`text-express-purple mb-2 ${showText ? 'animate-float' : ''}`}>
-        <Mic size={sizes[size].icon} strokeWidth={1.5} className="transform rotate-12" />
+        <Mic size={sizes[size].icon} strokeWidth={1.5} />
       </div>
       {showText && (
         <>
           <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text}`}>
-            EXPRESS
+            express
           </h1>
           <p className="text-white text-sm tracking-wider mt-1 opacity-90">
             PUBLIC SPEAKING AND DEBATING COMMITTEE

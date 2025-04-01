@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    document.title = 'EXPRESS - Public Speaking and Debating Committee';
+    document.title = 'express - Public Speaking and Debating Committee';
   }, []);
 
   return (
@@ -18,7 +18,7 @@ const Index: React.FC = () => {
           <Logo size="large" showText={true} />
           
           <div className="mt-16">
-            <Link to="/upcoming-events" className="express-button group">
+            <Link to="/about" className="express-button group">
               <span>LEARN MORE</span>
               <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
