@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React, { useEffect } from 'react';
+import ParticleBackground from '../components/ParticleBackground';
+import Logo from '../components/Logo';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
+
+const Index: React.FC = () => {
+  useEffect(() => {
+    document.title = 'EXPRESS - Public Speaking and Debating Committee';
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <>
+      <ParticleBackground />
+      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6">
+        <div className="flex flex-col items-center justify-center text-center max-w-3xl animate-fade-in">
+          <Logo size="large" showText={true} />
+          
+          <div className="mt-16">
+            <Link to="/upcoming-events" className="express-button group">
+              <span>LEARN MORE</span>
+              <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
