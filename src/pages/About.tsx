@@ -4,7 +4,6 @@ import ParticleBackground from '../components/ParticleBackground';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Card, CardContent } from '../components/ui/card';
 import { Users, Globe, BookOpen, School, Speech, Award, Lightbulb, MessageSquare } from 'lucide-react';
-import { Avatar } from '../components/ui/avatar';
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -12,6 +11,39 @@ const About: React.FC = () => {
   }, []);
   
   const isMobile = useIsMobile();
+
+  const flashcards = [
+    {
+      id: 1,
+      title: "Enhancing Public Speaking Skills",
+      description: "We help students discover and refine their inner speaker"
+    },
+    {
+      id: 2,
+      title: "Shaping Responsible Global Citizens",
+      description: "Our activities prepare students to think critically and act responsibly on global issues"
+    },
+    {
+      id: 3,
+      title: "Organizing Meaningful Debates",
+      description: "We host debates that tackle real-world issues and relevant resolutions"
+    },
+    {
+      id: 4,
+      title: "Encouraging Innovation & Idea Sharing",
+      description: "Our community fosters creativity and new perspectives through discussions"
+    },
+    {
+      id: 5,
+      title: "Preparing for a Fast-Paced World",
+      description: "We equip students with the confidence and skills to succeed in today's dynamic environment"
+    },
+    {
+      id: 6,
+      title: "Building a Supportive Community",
+      description: "We create a strong network of like-minded individuals who support and inspire each other"
+    }
+  ];
 
   return (
     <>
@@ -62,9 +94,9 @@ const About: React.FC = () => {
               <div className="md:flex">
                 <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
                   <img 
-                    src="/lovable-uploads/936c80f5-b8a7-4e1f-b6d7-bb87d8237ba0.png" 
-                    alt="What are we" 
-                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
+                    src="/lovable-uploads/1371b86a-1520-4a4d-8ffd-a331176cc323.png" 
+                    alt="DJS eXpress logo" 
+                    className="w-48 h-auto object-contain"
                   />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
@@ -97,9 +129,22 @@ const About: React.FC = () => {
                     </div>
                     <h2 className="text-2xl font-playfair font-semibold text-express-purple">What do we do?</h2>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us entire process is a learning experience.
                   </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+                    {flashcards.map((card) => (
+                      <div key={card.id} className="rounded-lg border border-express-purple/30 overflow-hidden hover:border-express-purple/60 transition-all group">
+                        <div className="p-4 bg-black/40 border-b border-express-purple/20">
+                          <h3 className="text-express-purple font-medium text-lg">{card.title}</h3>
+                        </div>
+                        <div className="p-4 bg-express-purple/10">
+                          <p className="text-sm text-gray-300">{card.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </div>
             </Card>
