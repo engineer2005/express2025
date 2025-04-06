@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Card, CardContent } from '../components/ui/card';
@@ -11,6 +11,16 @@ const About: React.FC = () => {
   }, []);
   
   const isMobile = useIsMobile();
+  
+  // State to track which cards are flipped
+  const [flippedCards, setFlippedCards] = useState<number[]>([]);
+
+  // Toggle flip state for a card
+  const toggleFlip = (id: number) => {
+    setFlippedCards(prev => 
+      prev.includes(id) ? prev.filter(cardId => cardId !== id) : [...prev, id]
+    );
+  };
 
   const flashcards = [
     {
@@ -58,7 +68,7 @@ const About: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+            <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
                 <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
                   <Users size={isMobile ? 32 : 40} className="text-express-purple" />
@@ -68,7 +78,7 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+            <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
                 <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
                   <Globe size={isMobile ? 32 : 40} className="text-express-purple" />
@@ -78,7 +88,7 @@ const About: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+            <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
                 <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
                   <BookOpen size={isMobile ? 32 : 40} className="text-express-purple" />
@@ -90,9 +100,9 @@ const About: React.FC = () => {
           </div>
           
           <div className="space-y-8 mt-8">
-            <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
+            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
-                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
+                <div className="md:w-1/3 flex items-center justify-center p-6">
                   <img 
                     src="/lovable-uploads/1371b86a-1520-4a4d-8ffd-a331176cc323.png" 
                     alt="DJS eXpress logo" 
@@ -113,16 +123,9 @@ const About: React.FC = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden border-none bg-gradient-to-l from-black/40 to-black/60 backdrop-blur-sm">
-              <div className="md:flex flex-row-reverse">
-                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
-                  <img 
-                    src="/lovable-uploads/3a4458fd-e2ff-4280-9c61-2e5e820a4e3f.png" 
-                    alt="What do we do" 
-                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <CardContent className="md:w-2/3 p-6">
+            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
+              <div className="md:flex">
+                <CardContent className="w-full p-6">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
                       <Speech className="text-express-purple h-5 w-5" />
@@ -130,17 +133,34 @@ const About: React.FC = () => {
                     <h2 className="text-2xl font-playfair font-semibold text-express-purple">What do we do?</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us entire process is a learning experience.
+                    At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us unique as the entire process is a learning experience.
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                     {flashcards.map((card) => (
-                      <div key={card.id} className="rounded-lg border border-express-purple/30 overflow-hidden hover:border-express-purple/60 transition-all group">
-                        <div className="p-4 bg-black/40 border-b border-express-purple/20">
-                          <h3 className="text-express-purple font-medium text-lg">{card.title}</h3>
-                        </div>
-                        <div className="p-4 bg-express-purple/10">
-                          <p className="text-sm text-gray-300">{card.description}</p>
+                      <div 
+                        key={card.id} 
+                        className={`h-64 cursor-pointer perspective-1000`}
+                        onClick={() => toggleFlip(card.id)}
+                      >
+                        <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flippedCards.includes(card.id) ? 'rotate-y-180' : ''}`}>
+                          {/* Front of card */}
+                          <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden">
+                            <div className="h-full flex flex-col bg-express-purple">
+                              <div className="p-4 flex-1 flex items-center justify-center">
+                                <h3 className="text-white font-bold text-lg text-center">{card.title}</h3>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Back of card */}
+                          <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden">
+                            <div className="h-full flex flex-col bg-express-purple/80">
+                              <div className="p-4 flex-1 flex items-center justify-center">
+                                <p className="text-white text-center">{card.description}</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
@@ -149,9 +169,9 @@ const About: React.FC = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden border-none bg-gradient-to-r from-black/40 to-black/60 backdrop-blur-sm">
+            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
-                <div className="md:w-1/3 bg-black/20 flex items-center justify-center p-6">
+                <div className="md:w-1/3 flex items-center justify-center p-6">
                   <img 
                     src="/lovable-uploads/9b940661-2387-4886-9524-a60ac9df112a.png" 
                     alt="Why choose us" 
