@@ -100,7 +100,7 @@ const About: React.FC = () => {
           </div>
           
           <div className="space-y-8 mt-8">
-            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
+            <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
                 <div className="md:w-1/3 flex items-center justify-center p-6">
                   <img 
@@ -123,7 +123,7 @@ const About: React.FC = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
+            <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
                 <CardContent className="w-full p-6">
                   <div className="flex items-start gap-3 mb-4">
@@ -169,16 +169,9 @@ const About: React.FC = () => {
               </div>
             </Card>
             
-            <Card className="overflow-hidden border-none backdrop-blur-sm border border-express-purple/30">
+            <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
-                <div className="md:w-1/3 flex items-center justify-center p-6">
-                  <img 
-                    src="/lovable-uploads/9b940661-2387-4886-9524-a60ac9df112a.png" 
-                    alt="Why choose us" 
-                    className="w-64 h-auto object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <CardContent className="md:w-2/3 p-6">
+                <CardContent className="w-full p-6">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="bg-express-purple/20 p-2 rounded-full flex-shrink-0 mt-1">
                       <Award className="text-express-purple h-5 w-5" />
