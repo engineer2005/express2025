@@ -35,46 +35,52 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-      ${scrolled ? 'py-3 bg-express-dark/80 backdrop-blur' : 'py-6 bg-transparent'}`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Mobile logo */}
-        <div className="md:hidden">
-          <Logo size="small" showText={false} />
+    <>
+      {/* Desktop Header */}
+      <header 
+        className={`hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300
+        ${scrolled ? 'py-3 bg-express-dark/80 backdrop-blur' : 'py-6 bg-transparent'}`}
+      >
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          {/* Desktop menu */}
+          <nav className="flex justify-center space-x-12 items-center">
+            {navLinks.map((link) => (
+              <NavLink 
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) => 
+                  `nav-link ${isActive ? 'text-express-purple' : 'text-white'}`
+                }
+                onClick={closeMenu}
+              >
+                {link.title}
+              </NavLink>
+            ))}
+          </nav>
         </div>
+      </header>
 
-        {/* Desktop menu */}
-        <nav className="hidden md:flex justify-center space-x-12 items-center">
-          {navLinks.map((link) => (
-            <NavLink 
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) => 
-                `nav-link ${isActive ? 'text-express-purple' : 'text-white'}`
-              }
-              onClick={closeMenu}
-            >
-              {link.title}
-            </NavLink>
-          ))}
-        </nav>
-
-        {/* Mobile menu button */}
+      {/* Mobile Header - Only hamburger is sticky */}
+      <div className="md:hidden">
+        {/* Sticky hamburger button */}
         <button 
-          className="md:hidden text-white z-50"
+          className="fixed top-4 right-4 bg-express-dark/80 backdrop-blur rounded-full p-2 z-50 text-white"
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile menu */}
+        {/* Non-sticky mobile header shown at top of page */}
+        <header className="w-full py-4 px-6 flex items-center justify-start">
+          <Logo size="small" showText={false} />
+        </header>
+
+        {/* Mobile menu overlay */}
         <div 
           className={`fixed inset-0 bg-express-dark/95 flex flex-col items-center justify-center space-y-8 z-40 transition-transform duration-300 ease-in-out transform ${
             isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-          } md:hidden`}
+          }`}
         >
           <Logo size="medium" showText={true} />
           {navLinks.map((link) => (
@@ -91,7 +97,7 @@ const Navbar: React.FC = () => {
           ))}
         </div>
       </div>
-    </header>
+    </>
   );
 };
 
