@@ -32,13 +32,13 @@ const ParticleBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles
+    // Initialize particles with faster speed
     particlesRef.current = Array.from({ length: numParticles }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       size: Math.random() * 3 + 1,
-      speedX: (Math.random() - 0.5) * 0.3,
-      speedY: (Math.random() - 0.5) * 0.3,
+      speedX: (Math.random() - 0.5) * 0.8, // Increased speed
+      speedY: (Math.random() - 0.5) * 0.8, // Increased speed
       opacity: Math.random() * 0.5 + 0.2
     }));
 
@@ -70,7 +70,7 @@ const ParticleBackground: React.FC = () => {
         ctx.fillStyle = `rgba(136, 97, 255, ${particle.opacity})`;
         ctx.fill();
 
-        // Update position
+        // Update position with faster speed
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
@@ -81,6 +81,7 @@ const ParticleBackground: React.FC = () => {
         if (particle.y > canvas.height) particle.y = 0;
       });
 
+      // Request next frame with less latency (use requestAnimationFrame directly)
       animationRef.current = requestAnimationFrame(animate);
     };
 
