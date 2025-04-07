@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface LogoProps {
@@ -10,15 +9,21 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
   const sizes = {
-    small: { icon: 36, text: 'text-2xl' },
-    medium: { icon: 64, text: 'text-4xl' },
-    large: { icon: 86, text: 'text-6xl' }
+    small: { logo: 36, text: 'text-2xl' },
+    medium: { logo: 64, text: 'text-4xl' },
+    large: { logo: 86, text: 'text-6xl' }
   };
 
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
-      <div className={`text-express-purple mb-2 ${showText ? 'animate-float' : ''}`}>
-        <Mic size={sizes[size].icon} strokeWidth={1.5} />
+      <div className={`mb-2 ${showText ? 'animate-float' : ''}`}>
+        <img 
+          src="/public/lovable-uploads/a5ed345f-50ed-4e84-9b02-9aecf1c7c76c.png" 
+          alt="DJS Express Logo" 
+          width={sizes[size].logo} 
+          height={sizes[size].logo}
+          className="text-express-purple" 
+        />
       </div>
       {showText && (
         <>
