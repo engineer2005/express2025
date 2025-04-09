@@ -4,6 +4,7 @@ import ParticleBackground from '../components/ParticleBackground';
 import { useIsMobile } from '../hooks/use-mobile';
 import { Card, CardContent } from '../components/ui/card';
 import { Users, Globe, BookOpen, School, Speech, Award, Lightbulb, MessageSquare } from 'lucide-react';
+import logo from '../images/logo.png'
 
 const About: React.FC = () => {
   useEffect(() => {
@@ -104,7 +105,7 @@ const About: React.FC = () => {
               <div className="md:flex">
                 <div className="md:w-1/3 flex items-center justify-center p-6">
                   <img 
-                    src="/lovable-uploads/1371b86a-1520-4a4d-8ffd-a331176cc323.png" 
+                    src={logo} 
                     alt="DJS eXpress logo" 
                     className="w-48 h-auto object-contain"
                   />
