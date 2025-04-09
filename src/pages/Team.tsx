@@ -24,7 +24,7 @@ import t from '../images/t.jpg'
 import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
 
-import teacher from '../images/teacher.jpg' 
+import teacher from '../images/e2.jpg' 
 
 const Team: React.FC = () => {
   useEffect(() => {
@@ -135,10 +135,10 @@ const Team: React.FC = () => {
     }
   ];
 
-  // Faculty card component
+  // Faculty card component - INCREASED SIZE
   const FacultyCard = ({ member }) => (
     <div className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
-      <div className="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-express-purple/80 group-hover:border-express-purple transition-all">
+      <div className="w-56 h-56 rounded-full overflow-hidden mb-6 border-4 border-express-purple/80 group-hover:border-express-purple transition-all">
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-2xl font-playfair font-semibold text-white mb-2">{member.name}</h3>
@@ -146,10 +146,10 @@ const Team: React.FC = () => {
     </div>
   );
 
-  // Member card component - increased size
+  // Member card component - INCREASED SIZE
   const MemberCard = ({ member }) => (
     <div className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10 group">
-      <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-express-purple/50 group-hover:border-express-purple transition-all">
+      <div className="w-44 h-44 rounded-full overflow-hidden mb-5 border-3 border-express-purple/50 group-hover:border-express-purple transition-all">
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
