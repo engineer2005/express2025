@@ -3,12 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {

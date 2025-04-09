@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 interface Particle {
   x: number;
@@ -16,8 +15,7 @@ const ParticleBackground: React.FC = () => {
   const [scale, setScale] = useState(1);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
-  const isMobile = useIsMobile();
-  const numParticles = isMobile ? 100 : 200; // Fewer particles on mobile
+  const numParticles = 200;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -34,13 +32,13 @@ const ParticleBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles with mobile-optimized settings
+    // Initialize particles with faster speed
     particlesRef.current = Array.from({ length: numParticles }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * (isMobile ? 2 : 3) + 1, // Smaller particles on mobile
-      speedX: (Math.random() - 0.5) * (isMobile ? 0.6 : 0.8), // Slower on mobile to reduce distraction
-      speedY: (Math.random() - 0.5) * (isMobile ? 0.6 : 0.8), // Slower on mobile
+      size: Math.random() * 3 + 1,
+      speedX: (Math.random() - 0.5) * 0.8, // Increased speed
+      speedY: (Math.random() - 0.5) * 0.8, // Increased speed
       opacity: Math.random() * 0.5 + 0.2
     }));
 
@@ -72,7 +70,7 @@ const ParticleBackground: React.FC = () => {
         ctx.fillStyle = `rgba(136, 97, 255, ${particle.opacity})`;
         ctx.fill();
 
-        // Update position with adjusted speed
+        // Update position with faster speed
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
@@ -83,7 +81,7 @@ const ParticleBackground: React.FC = () => {
         if (particle.y > canvas.height) particle.y = 0;
       });
 
-      // Request next frame with less latency
+      // Request next frame with less latency (use requestAnimationFrame directly)
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -94,7 +92,7 @@ const ParticleBackground: React.FC = () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [scale, isMobile, numParticles]);
+  }, [scale]);
 
   return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full pointer-events-none z-0" />;
 };
