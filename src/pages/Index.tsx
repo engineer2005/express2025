@@ -18,11 +18,11 @@ const Index: React.FC = () => {
       <ParticleBackground />
       <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-4">
         <div className="flex flex-col items-center justify-center text-center max-w-3xl animate-fade-in">
-          <div className={`transform ${isMobile ? 'scale-100' : 'scale-110'}`}>
-            <Logo size={isMobile ? "medium" : "large"} showText={true} />
+          <div className="transform">
+            <Logo size={isMobile ? "large" : "large"} showText={true} />
           </div>
           
-          <div className={`${isMobile ? 'mt-4' : 'mt-8'}`}>
+          <div className="mt-6">
             <Link to="/about" className="express-button group">
               <span>LEARN MORE</span>
               <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />

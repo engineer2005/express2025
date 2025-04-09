@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +74,7 @@ const Navbar: React.FC = () => {
         </button>
 
         {/* Non-sticky mobile header shown at top of page */}
-        <header className="w-full py-4 px-6 flex items-center justify-start">
+        <header className="w-full py-2 px-4 flex items-center justify-start">
           <Logo size="small" showText={false} />
         </header>
 
