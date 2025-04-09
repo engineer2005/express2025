@@ -6,18 +6,19 @@ import logo from '../images/logo.png'
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
   showText?: boolean;
+  compact?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
+const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true, compact = false }) => {
   const sizes = {
     small: { logo: 48, text: 'text-xl sm:text-2xl' },
-    medium: { logo: 72, text: 'text-3xl sm:text-4xl' },
-    large: { logo: 120, text: 'text-4xl sm:text-6xl' } 
+    medium: { logo: compact ? 60 : 72, text: 'text-2xl sm:text-4xl' },
+    large: { logo: compact ? 80 : 120, text: 'text-3xl sm:text-6xl' } 
   };
 
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
-      <div className={`${showText ? '-mb-4 sm:-mb-8 animate-float' : ''}`}>
+      <div className={`${showText ? `${compact ? '-mb-1 sm:-mb-8' : '-mb-4 sm:-mb-8'} animate-float` : ''}`}>
         <img 
           src={logo}
           alt="DJS Express Logo" 
@@ -31,7 +32,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
           <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text}`}>
             eXpress
           </h1>
-          <p className="text-white text-xs sm:text-sm tracking-wider mt-1 opacity-90">
+          <p className={`text-white text-xs sm:text-sm tracking-wider ${compact ? 'mt-0' : 'mt-1'} opacity-90`}>
             PUBLIC SPEAKING AND DEBATING COMMITTEE
           </p>
         </>
