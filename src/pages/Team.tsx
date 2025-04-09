@@ -2,6 +2,27 @@
 import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import vcp from '../images/vcp.jpg'
+import pm  from '../images/pm.jpg'
+import p from '../images/p.jpg'
+import p2 from '../images/p2.jpeg'
+import p1 from '../images/harshil.jpg'
+import c1 from '../images/c1.jpg'
+import c2 from '../images/c2.jpg'
+import s1 from '../images/s1.jpg'
+import m1 from '../images/m1.jpg'
+import m2 from '../images/m2.jpg'
+import e1 from '../images/e1.jpg'
+import e2 from '../images/e2.jpg'
+import j1 from '../images/j1.jpg'
+import o1 from '../images/o1 (1).jpg'
+import o2 from '../images/o2.jpg'
+import cp from '../images/cp.jpg'
+import vcp2 from '../images/vcp2.jpg'
+import ev1 from '../images/ev1.jpg'
+import t from '../images/t.jpg'
+import s2 from '../images/s2.jpg'
+import j2 from '../images/j2.jpg'
 
 const Team: React.FC = () => {
   useEffect(() => {
@@ -12,19 +33,19 @@ const Team: React.FC = () => {
   const chairperson = {
     name: "Aniket Prasad",
     role: "Chairperson",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
+    image: cp, 
   };
   
   const viceChairpersons = [
     {
       name: "Kevin Savla",
       role: "Vice Chairperson",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
+      image: vcp, 
     },
     {
       name: "Kriish Chheda",
       role: "Vice Chairperson",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80", 
+      image: vcp2, 
     }
   ];
   
@@ -33,74 +54,74 @@ const Team: React.FC = () => {
     {
       name: "Treasurer",
       members: [
-        { name: "Devanshi Shah", role: "Treasurer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
+        { name: "Devanshi Shah", role: "Treasurer", image: t } 
       ]
     },
     {
       name: "Secretaries",
       members: [
-        { name: "Neeraja Shah", role: "Secretary", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
-        { name: "Harshil Raval", role: "Secretary", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
+        { name: "Neeraja Shah", role: "Secretary", image: s2 }, 
+        { name: "Harshil Raval", role: "Secretary", image: s1 } 
       ]
     },
     {
       name: "Events",
       members: [
-        { name: "Ananya Patel", role: "Events Head", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
-        { name: "Rushabh Shah", role: "Events Head", image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
+        { name: "Ananya Patel", role: "Events Head", image: e2 }, 
+        { name: "Rushabh Shah", role: "Events Head", image: ev1 } 
       ]
     },
     {
       name: "Publicity",
       members: [
-        { name: "Harshil Bhanushali", role: "Publicity Head", image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Chhavi Rathod", role: "Publicity Head", image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Harshil Bhanushali", role: "Publicity Head", image: p1 },
+        { name: "Chhavi Rathod", role: "Publicity Head", image: p2 }
       ]
     },
     {
       name: "Creatives",
       members: [
-        { name: "Disha Shetty", role: "Creatives Head", image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }, 
-        { name: "Shalmalee Thakur", role: "Creatives Head", image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" } 
+        { name: "Disha Shetty", role: "Creatives Head", image: c2 }, 
+        { name: "Shalmalee Thakur", role: "Creatives Head", image: c1 } 
       ]
     },
     {
       name: "Operations",
       members: [
-        { name: "Anmol Santwani", role: "Operations Head", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Dhruv Singhania", role: "Operations Head", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Anmol Santwani", role: "Operations Head", image: o2 },
+        { name: "Dhruv Singhania", role: "Operations Head", image: o1 }
       ]
     },
     {
       name: "Marketing",
       members: [
-        { name: "Dhairya Dharod", role: "Marketing Head", image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Atharva Kismatrao", role: "Marketing Head", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Dhairya Dharod", role: "Marketing Head", image: m1 },
+        { name: "Atharva Kismatrao", role: "Marketing Head", image: m2 }
       ]
     },
     {
       name: "Journalism",
       members: [
-        { name: "Ibrahim Kothari", role: "Journalism Head", image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" },
-        { name: "Jash Sheth", role: "Journalism Head", image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Ibrahim Kothari", role: "Journalism Head", image: j2 },
+        { name: "Jash Sheth", role: "Journalism Head", image: j1 }
       ]
     },
     {
       name: "Editorial",
       members: [
-        { name: "Hardik lyer", role: "Editorial Head", image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Hardik lyer", role: "Editorial Head", image: e1 }
       ]
     },
     {
       name: "Technical",
       members: [
-        { name: "Pearl Mody", role: "Technical Head", image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Pearl Mody", role: "Technical Head", image:pm }
       ]
     },
     {
       name: "Production",
       members: [
-        { name: "Krishna Naudiyal", role: "Production Head", image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" }
+        { name: "Krishna Naudiyal", role: "Production Head", image: p }
       ]
     }
   ];
@@ -158,10 +179,6 @@ const Team: React.FC = () => {
             </div>
           ))}
 
-          <div className="text-center mt-12 bg-black/30 p-6 rounded-lg border border-express-purple/20">
-            <h3 className="text-xl font-playfair text-express-purple mb-2">Want to share your team photos?</h3>
-            <p className="text-gray-300">Please email your team photos to <span className="text-express-light">express@djsce.ac.in</span> with the subject line "Team Photos".</p>
-          </div>
         </div>
       </div>
     </>
