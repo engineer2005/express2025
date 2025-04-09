@@ -15,13 +15,13 @@ const Expresso: React.FC = () => {
   return (
     <>
       <ParticleBackground />
-      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6">
+      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6 py-0">
         <div className="flex flex-col items-center justify-center text-center max-w-4xl">
-          <h1 className="text-6xl md:text-7xl font-bold text-express-purple mb-8 font-playfair">
+          <h1 className="text-5xl md:text-7xl font-bold text-express-purple mb-6 font-playfair">
             eXpresso
           </h1>
           
-          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-center text-gray-300 max-w-2xl mx-auto mb-8">
             Our literary magazine featuring articles, stories, poems, and insights about public speaking, debating, and communication skills.
           </p>
           

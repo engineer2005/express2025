@@ -15,12 +15,12 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
   const sizes = {
     small: { logo: isMobile ? 60 : 48, text: 'text-2xl' },
     medium: { logo: isMobile ? 90 : 86, text: isMobile ? 'text-3xl' : 'text-4xl' },
-    large: { logo: isMobile ? 150 : 200, text: isMobile ? 'text-5xl' : 'text-6xl' }
+    large: { logo: isMobile ? 170 : 200, text: isMobile ? 'text-5xl' : 'text-6xl' }
   };
 
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
-      <div className={`${showText ? (isMobile ? '-mb-2' : '-mb-8') + ' animate-float' : ''}`}>
+      <div className={`${showText ? (isMobile ? '-mb-1' : '-mb-8') + ' animate-float' : ''}`}>
         <img 
           src={logo}
           alt="DJS Express Logo" 

@@ -42,3 +42,17 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Fix for mobile spacing */
+@media (max-width: 768px) {
+  .min-h-screen {
+    min-height: 100vh;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* Make Navbar take up less space on mobile */
+  .pt-24 {
+    padding-top: 4rem !important;
+  }
+}

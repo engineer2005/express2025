@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -16,7 +17,7 @@ const ParticleBackground: React.FC = () => {
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
   const isMobile = useIsMobile();
-  const numParticles = isMobile ? 100 : 200; // Reduce particles on mobile
+  const numParticles = isMobile ? 80 : 200; // Reduce particles on mobile
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,7 +38,7 @@ const ParticleBackground: React.FC = () => {
     particlesRef.current = Array.from({ length: numParticles }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * (isMobile ? 2 : 3) + 1, // Smaller particles on mobile
+      size: Math.random() * (isMobile ? 1.5 : 3) + 0.5, // Smaller particles on mobile
       speedX: (Math.random() - 0.5) * 0.8,
       speedY: (Math.random() - 0.5) * 0.8,
       opacity: Math.random() * 0.5 + 0.2
@@ -45,8 +46,8 @@ const ParticleBackground: React.FC = () => {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newScale = 1 + scrollY * 0.001;
-      setScale(newScale > 1 ? (newScale > 1.5 ? 1.5 : newScale) : 1);
+      const newScale = 1 + scrollY * 0.0005; // Reduced scaling effect
+      setScale(newScale > 1 ? (newScale > 1.3 ? 1.3 : newScale) : 1);
     };
 
     window.addEventListener('scroll', handleScroll);
