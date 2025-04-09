@@ -23,11 +23,19 @@ import ev1 from '../images/ev1.jpg'
 import t from '../images/t.jpg'
 import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
+import teacher from '../images/teacher.jpg'
 
 const Team: React.FC = () => {
   useEffect(() => {
     document.title = 'Team - eXpress';
   }, []);
+
+  // Faculty
+  const faculty = {
+    name: "Dr. Renjini Ramachandran",
+    role: "Faculty Advisor",
+    image: teacher,
+  };
 
   // Core team
   const chairperson = {
@@ -126,10 +134,21 @@ const Team: React.FC = () => {
     }
   ];
 
-  // Member card component - removed social media icons
+  // Faculty card component
+  const FacultyCard = ({ member }) => (
+    <div className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-8 flex flex-col items-center text-center transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
+      <div className="w-40 h-40 rounded-full overflow-hidden mb-6 border-4 border-express-purple/80 group-hover:border-express-purple transition-all">
+        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+      </div>
+      <h3 className="text-2xl font-playfair font-semibold text-white mb-2">{member.name}</h3>
+      <p className="text-express-purple mt-1 font-bold text-lg">{member.role}</p>
+    </div>
+  );
+
+  // Member card component - increased size
   const MemberCard = ({ member }) => (
     <div className="bg-black/20 backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/10 group">
-      <div className="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-express-purple/50 group-hover:border-express-purple transition-all">
+      <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-express-purple/50 group-hover:border-express-purple transition-all">
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
@@ -149,6 +168,16 @@ const Team: React.FC = () => {
           <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
             Meet our dedicated team of public speaking and debate enthusiasts who work tirelessly to organize events and workshops for our community.
           </p>
+          
+          {/* Faculty Advisor - New Section */}
+          <div className="mb-16">
+            <h2 className="text-center text-2xl md:text-3xl font-playfair font-bold text-express-light mb-8">Esteemed Faculty</h2>
+            <div className="flex justify-center mb-8">
+              <div className="w-full max-w-md">
+                <FacultyCard member={faculty} />
+              </div>
+            </div>
+          </div>
           
           {/* Chairperson */}
           <div className="mb-16">
