@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import Logo from '../components/Logo';
@@ -18,7 +19,7 @@ const Index: React.FC = () => {
             <Logo size="large" showText={true} />
           </div>
           
-          <div className="mt-12">
+          <div className="mt-8">
             <Link to="/about" className="express-button group">
               <span>LEARN MORE</span>
               <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
