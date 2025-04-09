@@ -23,8 +23,8 @@ import ev1 from '../images/ev1.jpg'
 import t from '../images/t.jpg'
 import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
-// Using a different image since teacher.jpg is missing
-import e2AsFaculty from '../images/e2.jpg' 
+
+import teacher from '../images/teacher.jpg' 
 
 const Team: React.FC = () => {
   useEffect(() => {
@@ -33,9 +33,9 @@ const Team: React.FC = () => {
 
   // Faculty
   const faculty = {
-    name: "Dr. Renjini Ramachandran",
+    name: "Professor Ranjeet Puyed",
     role: "Faculty Advisor",
-    image: e2AsFaculty, // Using a different existing image
+    image: teacher, 
   };
 
   // Core team
