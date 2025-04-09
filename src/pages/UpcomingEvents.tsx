@@ -3,6 +3,10 @@ import React, { useEffect } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { Calendar, MapPin, Clock, ExternalLink, Award, Phone, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import bigbang from '../images/bigbang.png'
+import how from '../images/how.png'
+import modern from '../images/modern.png'
+import friends from '../images/friends.png'
 
 const UpcomingEvents: React.FC = () => {
   useEffect(() => {
@@ -34,10 +38,10 @@ const UpcomingEvents: React.FC = () => {
                 <div className="md:w-1/3">
                   <div className="bg-black/50 rounded-lg overflow-hidden h-64 mb-4">
                     <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-1">
-                      <img src="../images/bigbang.png" className="object-cover w-full h-full" />
-                      <img src="../images/how.png" alt="How I Met Your Mother" className="object-cover w-full h-full" />
-                      <img src="../images/modern.png" alt="Modern Family" className="object-cover w-full h-full" />
-                      <img src="../images/friends.png" alt="Friends" className="object-cover w-full h-full" />
+                      <img src= {bigbang}  className="object-cover w-full h-full" />
+                      <img src={how} alt="How I Met Your Mother" className="object-cover w-full h-full" />
+                      <img src={modern} alt="Modern Family" className="object-cover w-full h-full" />
+                      <img src={friends} alt="Friends" className="object-cover w-full h-full" />
                     </div>
                   </div>
                 </div>
