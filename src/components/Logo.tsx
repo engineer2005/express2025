@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
   const sizes = {
     small: { logo: 48, text: 'text-2xl' },
     medium: { logo: 86, text: 'text-4xl' },
-    large: { logo: 160, text: 'text-6xl' } // Increased from 120 to 160
+    large: { logo: 200, text: 'text-6xl' } // Significantly increased from 160 to 200
   };
 
   return (

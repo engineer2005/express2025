@@ -15,7 +15,10 @@ const Index: React.FC = () => {
       <ParticleBackground />
       <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6">
         <div className="flex flex-col items-center justify-center text-center max-w-3xl animate-fade-in">
-          <Logo size="large" showText={true} />
+          {/* Added more margin and padding around the logo for visual impact */}
+          <div className="mb-8 scale-110 transform">
+            <Logo size="large" showText={true} />
+          </div>
           
           <div className="mt-16">
             <Link to="/about" className="express-button group">
