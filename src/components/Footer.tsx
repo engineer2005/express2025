@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, Linkedin, Heart } from 'lucide-react';
+import { Instagram, Linkedin, Heart, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -22,6 +22,15 @@ const Footer: React.FC = () => {
               aria-label="Instagram"
             >
               <Instagram size={20} />
+            </a>
+            <a 
+              href="https://www.youtube.com/channel/UCHdP0ud0OwiA-mp6hU89QGA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube size={20} />
             </a>
             <a 
               href="https://www.linkedin.com/company/djexpress/posts/?feedView=all"
