@@ -24,7 +24,7 @@ import t from '../images/t.jpg'
 import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
 
-import teacher from '../images/e2.jpg' 
+import teacher from '../images/teacher.jpg' 
 
 const Team: React.FC = () => {
   useEffect(() => {
