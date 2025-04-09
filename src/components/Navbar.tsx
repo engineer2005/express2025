@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
       </header>
 
       {/* Mobile Header - Only hamburger is sticky */}
-      <div className="md:hidden">
+      <div className="md:hidden h-0">
         {/* Sticky hamburger button */}
         <button 
           className="fixed top-4 right-4 bg-express-dark/80 backdrop-blur rounded-full p-2 z-50 text-white"
@@ -70,11 +70,6 @@ const Navbar: React.FC = () => {
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-
-        {/* Non-sticky mobile header shown at top of page */}
-        <header className="w-full py-4 px-6 flex items-center justify-start">
-          <Logo size="small" showText={false} />
-        </header>
 
         {/* Mobile menu overlay */}
         <div 
