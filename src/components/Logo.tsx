@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
   showText?: boolean;
@@ -18,7 +19,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
     <Link to="/" className="flex flex-col items-center no-underline">
       <div className={`${showText ? '-mb-8 animate-float' : ''}`}>
         <img 
-          src="/public/lovable-uploads/a5ed345f-50ed-4e84-9b02-9aecf1c7c76c.png" 
+          src="../images/logo.png" 
           alt="DJS Express Logo" 
           width={sizes[size].logo} 
           height={sizes[size].logo}
