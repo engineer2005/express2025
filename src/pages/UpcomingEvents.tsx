@@ -46,8 +46,8 @@ const UpcomingEvents: React.FC = () => {
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                     <h2 className="text-3xl font-semibold text-white font-playfair">The Pilot: Episode 1</h2>
                     <div className="mt-2 sm:mt-0">
-                      <span className="bg-express-purple text-white px-3 py-1 rounded-full text-sm font-bold">
-                        FREE Registration
+                      <span className="bg-express-purple/50 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        Registration Closed
                       </span>
                     </div>
                   </div>
@@ -114,19 +114,21 @@ const UpcomingEvents: React.FC = () => {
                     <Button 
                       onClick={handleRegister}
                       className="express-button group"
+                      disabled
                     >
-                      <span>REGISTER NOW</span>
+                      <span>REGISTRATION CLOSED</span>
                       <ExternalLink size={16} />
                     </Button>
                     
-                    <Button 
-                      onClick={handleInstagram}
-                      variant="outline" 
-                      className="border-express-purple/50 text-white hover:bg-express-purple/10"
+                    <a 
+                      href="https://www.instagram.com/djsce.express"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors flex items-center justify-center h-10 w-10"
+                      aria-label="Instagram"
                     >
-                      <Instagram size={18} className="mr-2 text-express-purple" />
-                      <span>Follow us on Instagram</span>
-                    </Button>
+                      <Instagram size={20} />
+                    </a>
                   </div>
                 </div>
               </div>

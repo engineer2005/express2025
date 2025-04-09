@@ -152,7 +152,7 @@ const Team: React.FC = () => {
           
           {/* Chairperson */}
           <div className="mb-16">
-            <h2 className="text-center text-2xl font-playfair text-express-light mb-6">Leadership</h2>
+            <h2 className="text-center text-2xl font-playfair font-bold text-express-light mb-6">Leadership</h2>
             <div className="flex justify-center mb-8">
               <div className="w-full max-w-xs">
                 <MemberCard member={chairperson} />
@@ -170,7 +170,7 @@ const Team: React.FC = () => {
           {/* Department Heads */}
           {departments.map((dept, index) => (
             <div className="mb-16" key={index}>
-              <h2 className="text-center text-2xl font-playfair text-express-light mb-6">{dept.name}</h2>
+              <h2 className="text-center text-2xl font-playfair font-bold text-express-light mb-6">{dept.name}</h2>
               <div className={`grid grid-cols-1 ${dept.members.length > 1 ? 'md:grid-cols-2' : ''} gap-8 max-w-2xl mx-auto`}>
                 {dept.members.map((member, memberIndex) => (
                   <MemberCard key={memberIndex} member={member} />
