@@ -92,7 +92,11 @@
   }
 
   body {
-    @apply bg-express-dark text-white font-sans overflow-x-hidden;
+    @apply bg-express-dark text-white font-sans overflow-x-hidden min-h-screen;
+  }
+
+  html {
+    @apply overflow-x-hidden;
   }
 }
 
@@ -123,7 +127,7 @@
 }
 
 .express-button {
-  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-express-purple px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-express-light hover:text-express-light;
+  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-express-purple px-6 py-2 sm:px-8 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:border-express-light hover:text-express-light;
 }
 
 .express-button::before {
@@ -174,4 +178,27 @@
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }

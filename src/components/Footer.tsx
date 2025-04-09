@@ -4,11 +4,11 @@ import { Instagram, Linkedin, Heart, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative z-10 py-8 px-6 bg-black/30 backdrop-blur-sm border-t border-express-purple/20">
+    <footer className="relative z-10 py-6 px-4 md:py-8 md:px-6 bg-black/30 backdrop-blur-sm border-t border-express-purple/20">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-xs sm:text-sm">
               © {new Date().getFullYear()} DJS express. All rights reserved.
             </p>
           </div>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
               aria-label="Instagram"
             >
-              <Instagram size={20} />
+              <Instagram size={18} />
             </a>
             <a 
               href="https://www.youtube.com/channel/UCHdP0ud0OwiA-mp6hU89QGA"
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
               aria-label="YouTube"
             >
-              <Youtube size={20} />
+              <Youtube size={18} />
             </a>
             <a 
               href="https://www.linkedin.com/company/djexpress/posts/?feedView=all"
@@ -39,13 +39,13 @@ const Footer: React.FC = () => {
               className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <Linkedin size={18} />
             </a>
           </div>
           
-          <div className="text-center md:text-right text-sm text-gray-400 flex items-center">
+          <div className="text-center md:text-right text-xs sm:text-sm text-gray-400 flex items-center">
             <span>Made with</span>
-            <Heart size={14} className="mx-1 text-express-purple" />
+            <Heart size={12} className="mx-1 text-express-purple" />
             <span>by DJS express</span>
           </div>
         </div>

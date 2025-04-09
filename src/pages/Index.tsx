@@ -13,9 +13,9 @@ const Index: React.FC = () => {
   return (
     <>
       <ParticleBackground />
-      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6">
+      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-4 md:px-6">
         <div className="flex flex-col items-center justify-center text-center max-w-3xl animate-fade-in">
-          <div className="scale-110 transform">
+          <div className="transform md:scale-110">
             <Logo size="large" showText={true} />
           </div>
           

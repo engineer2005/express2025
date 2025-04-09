@@ -18,20 +18,24 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/upcoming-events" element={<UpcomingEvents />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/expresso" element={<Expresso />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navbar />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/upcoming-events" element={<UpcomingEvents />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/expresso" element={<Expresso />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );
