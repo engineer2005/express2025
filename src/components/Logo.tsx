@@ -16,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
 
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
-      <div className={`mb-2 ${showText ? 'animate-float' : ''}`}>
+      <div className={`${showText ? 'mb-0 animate-float' : ''}`}>
         <img 
           src="/public/lovable-uploads/a5ed345f-50ed-4e84-9b02-9aecf1c7c76c.png" 
           alt="DJS Express Logo" 
