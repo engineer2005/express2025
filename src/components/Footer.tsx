@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} DJS express. All rights reserved.
+              © {new Date().getFullYear()} DJS eXpress. All rights reserved.
             </p>
           </div>
           
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
           <div className="text-center md:text-right text-sm text-gray-400 flex items-center">
             <span>Made with</span>
             <Heart size={14} className="mx-1 text-express-purple" />
-            <span>by DJS express</span>
+            <span>by DJS eXpress</span>
           </div>
         </div>
       </div>
