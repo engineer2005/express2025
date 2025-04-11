@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         className={`hidden md:block fixed top-0 left-0 w-full z-50 transition-all duration-300
         ${scrolled ? 'py-3 bg-express-dark/80 backdrop-blur' : 'py-6 bg-transparent'}`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="container mx-auto px-6 flex justify-center items-center">
           {/* Desktop menu */}
           <nav className="flex justify-center space-x-12 items-center">
             {navLinks.map((link) => (
