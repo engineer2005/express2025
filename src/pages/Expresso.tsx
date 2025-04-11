@@ -22,19 +22,19 @@ const Expresso: React.FC = () => {
       number: 1,
       title: "First Edition",
       url: "https://drive.google.com/file/d/1P-3Pp2KMMoCAtD9yBggTAuDKxx6ovpop/view?usp=sharing",
-      description: "Our inaugural edition exploring the art of public speaking and effective communication."
+      description: "What If We Played with Color? \n From thought experiments to Holi hues — explore the Vile Parle theme page and more."
     },
     {
       number: 2,
       title: "Second Edition",
       url: "https://drive.google.com/file/d/1U1IZt1Tb2HXHgOJFXKP6cYEH-16oLGDA/view?usp=sharing",
-      description: "Dive deeper into debate strategies and persuasive techniques with our second edition."
+      description: "Wings, Wins, and What’s Next ?  Air India’s last 747 takes a bow, and we dive into games that keep us flying high."
     },
     {
       number: 3,
       title: "Third Edition",
       url: "https://drive.google.com/file/d/1CKbazjDtGC3EAKfjvkSGxIlto0-MK46Y/view?usp=sharing",
-      description: "The latest collection of insights, stories, and guidance on becoming an exceptional communicator."
+      description: "Stories of Our Time..Where literature meets the headlines — reflecting the world through words."
     }
   ];
 
