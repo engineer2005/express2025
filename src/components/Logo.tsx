@@ -17,7 +17,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
 
   return (
     <Link to="/" className="flex flex-col items-center no-underline">
-      <div className={`${showText ? '-mb-2 animate-float' : ''}`}>
+      <div className={`${showText ? 'mb-0 animate-float' : ''}`}>
         <img 
           src={logo}
           alt="DJS Express Logo" 
@@ -28,7 +28,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
       </div>
       {showText && (
         <>
-          <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text}`}>
+          <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text} -mt-4`}>
             eXpress
           </h1>
           <p className="text-white text-sm tracking-wider mt-1 opacity-90">
