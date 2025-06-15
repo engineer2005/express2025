@@ -41,6 +41,18 @@ const Expresso: React.FC = () => {
       title: "March Edition",
       url: "https://drive.google.com/file/d/1LkocHCdiRoL-__fLOfEp0Xrtiqsy1TgT/view?usp=sharing",
       description: "Fresh perspectives and creative insights from our latest issue."
+    },
+    {
+      number: 5,
+      title: "April Edition",
+      url: "https://drive.google.com/file/d/1htG7co4aO1glDJXAzVVmaZYsntWBE5Kn/view?usp=sharing",
+      description: "Discover new voices and stories in our April collection."
+    },
+    {
+      number: 6,
+      title: "Main Edition",
+      url: "https://drive.google.com/file/d/1oT-qI5Ax_mUi0p7XPhjlFRNwwX241Dpi/view?usp=sharing",
+      description: "Our comprehensive main edition featuring the best content."
     }
   ];
 
