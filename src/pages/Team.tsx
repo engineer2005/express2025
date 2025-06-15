@@ -31,6 +31,13 @@ const Team: React.FC = () => {
     document.title = 'Team - eXpress';
   }, []);
 
+  // Principal
+  const principal = {
+    name: "Dr. Hari Vasudevan",
+    role: "Principal",
+    image: "/lovable-uploads/9edbfab9-f2bb-4fc1-ba2a-3d5e35b6a7a3.png", 
+  };
+
   // Faculty
   const faculty = {
     name: "Professor Ranjeet Puyed",
@@ -170,7 +177,17 @@ const Team: React.FC = () => {
             Meet our dedicated team of public speaking and debate enthusiasts who work tirelessly to organize events and workshops for our community.
           </p>
           
-          {/* Faculty Advisor - New Section */}
+          {/* Principal Section */}
+          <div className="mb-16">
+            <h2 className="text-center text-2xl md:text-3xl font-playfair font-bold text-express-light mb-8">Principal</h2>
+            <div className="flex justify-center mb-8">
+              <div className="w-full max-w-md">
+                <FacultyCard member={principal} />
+              </div>
+            </div>
+          </div>
+          
+          {/* Faculty Advisor Section */}
           <div className="mb-16">
             <h2 className="text-center text-2xl md:text-3xl font-playfair font-bold text-express-light mb-8">Esteemed Faculty</h2>
             <div className="flex justify-center mb-8">
