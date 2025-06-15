@@ -44,9 +44,9 @@ const ParticleBackground: React.FC = () => {
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Reduced scroll effect intensity
-      const newScale = 1 + scrollY * 0.0005;
-      setScale(newScale > 1 ? (newScale > 1.3 ? 1.3 : newScale) : 1);
+      // Much reduced scroll effect intensity
+      const newScale = 1 + scrollY * 0.0001;
+      setScale(newScale > 1 ? (newScale > 1.15 ? 1.15 : newScale) : 1);
     };
 
     window.addEventListener('scroll', handleScroll);
