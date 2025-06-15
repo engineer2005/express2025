@@ -28,10 +28,10 @@ const Logo: React.FC<LogoProps> = ({ size = 'medium', showText = true }) => {
       </div>
       {showText && (
         <>
-          <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text} -mt-8`}>
+          <h1 className={`text-express-purple font-bold tracking-wider ${sizes[size].text} -mt-10`}>
             eXpress
           </h1>
-          <p className="text-white text-sm tracking-wider mt-2 opacity-90">
+          <p className="text-white text-sm tracking-wider mt-4 opacity-90">
             PUBLIC SPEAKING AND DEBATING COMMITTEE
           </p>
         </>

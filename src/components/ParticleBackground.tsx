@@ -15,7 +15,7 @@ const ParticleBackground: React.FC = () => {
   const [scale, setScale] = useState(1);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
-  const numParticles = 200;
+  const numParticles = 150;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -32,21 +32,21 @@ const ParticleBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles with moderate speed
+    // Initialize particles with very gentle movement
     particlesRef.current = Array.from({ length: numParticles }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      size: Math.random() * 3 + 1,
-      speedX: (Math.random() - 0.5) * 0.5, // Reduced speed
-      speedY: (Math.random() - 0.5) * 0.5, // Reduced speed
-      opacity: Math.random() * 0.5 + 0.2
+      size: Math.random() * 2.5 + 0.8,
+      speedX: (Math.random() - 0.5) * 0.3, // Even more reduced speed
+      speedY: (Math.random() - 0.5) * 0.3, // Even more reduced speed
+      opacity: Math.random() * 0.4 + 0.25
     }));
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Reduced scroll effect intensity
-      const newScale = 1 + scrollY * 0.0005;
-      setScale(newScale > 1 ? (newScale > 1.3 ? 1.3 : newScale) : 1);
+      // Ultra subtle scroll effect with easing
+      const newScale = 1 + scrollY * 0.00005;
+      setScale(newScale > 1 ? (newScale > 1.08 ? 1.08 : newScale) : 1);
     };
 
     window.addEventListener('scroll', handleScroll);
