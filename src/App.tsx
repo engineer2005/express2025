@@ -11,6 +11,7 @@ import About from "./pages/About";
 import UpcomingEvents from "./pages/UpcomingEvents";
 import Team from "./pages/Team";
 import Expresso from "./pages/Expresso";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/upcoming-events" element={<UpcomingEvents />} />
           <Route path="/team" element={<Team />} />
           <Route path="/expresso" element={<Expresso />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -50,9 +50,15 @@ const Expresso: React.FC = () => {
     },
     {
       number: 6,
-      title: "Main Edition",
+      title: "May Edition",
       url: "https://drive.google.com/file/d/1oT-qI5Ax_mUi0p7XPhjlFRNwwX241Dpi/view?usp=sharing",
-      description: "Our comprehensive main edition featuring the best content."
+      description: "Our comprehensive May edition featuring the best content."
+    },
+    {
+      number: 7,
+      title: "June Edition",
+      url: "https://drive.google.com/drive/folders/1wl3DO5YX53zuQ6UYZ2AjFIzCMQ1ZMEvV",
+      description: "Fresh insights and stories from our June collection."
     }
   ];
 
