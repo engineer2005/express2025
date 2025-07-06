@@ -31,28 +31,34 @@ const Contact: React.FC = () => {
   return (
     <>
       <ParticleBackground />
-      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6 py-20 md:py-24">
-        <div className="flex flex-col items-center justify-center text-center max-w-6xl w-full">
-          <h1 className="text-6xl md:text-7xl font-bold text-express-purple mb-8 font-playfair">
+      <div className="relative min-h-screen z-10 px-4 py-16 md:py-24">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold text-express-purple mb-6 font-playfair">
             Contact Us
           </h1>
-          
-          <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto mb-12">
-            Get in touch with the eXpress team. We're here to help with all your public speaking and debating needs.
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Connect with the eXpress team for public speaking workshops, debate competitions, 
+            and all your communication skill development needs.
           </p>
+        </div>
 
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-express-purple mb-6">Get In Touch</h2>
+        <div className="max-w-7xl mx-auto">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-12">
+            
+            {/* Contact Information - Left Column */}
+            <div className="xl:col-span-1 space-y-6">
               
-              {/* College Location */}
-              <div className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl p-6 hover:border-express-purple/50 transition-all duration-300">
+              {/* Location Card */}
+              <div className="group bg-gradient-to-br from-express-purple/10 to-transparent backdrop-blur-sm border border-express-purple/30 rounded-2xl p-8 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500">
                 <div className="flex items-start space-x-4">
-                  <MapPin className="text-express-purple mt-1" size={24} />
+                  <div className="bg-express-purple/20 p-3 rounded-full group-hover:bg-express-purple/30 transition-colors">
+                    <MapPin className="text-express-purple" size={24} />
+                  </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-2">Our Location</h3>
-                    <p className="text-gray-300">
+                    <h3 className="text-xl font-bold text-white mb-3">Visit Us</h3>
+                    <p className="text-gray-300 leading-relaxed">
                       DJ Sanghvi College of Engineering<br />
                       Plot No. U-15, Juhu Versova Link Road<br />
                       Vile Parle (West), Mumbai - 400056<br />
@@ -62,24 +68,41 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Team Contacts */}
+              {/* Quick Contact */}
+              <div className="group bg-gradient-to-br from-express-purple/10 to-transparent backdrop-blur-sm border border-express-purple/30 rounded-2xl p-8 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500">
+                <div className="text-center">
+                  <div className="bg-express-purple/20 p-3 rounded-full inline-block group-hover:bg-express-purple/30 transition-colors mb-4">
+                    <Mail className="text-express-purple" size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Quick Contact</h3>
+                  <p className="text-gray-300 text-sm">
+                    For immediate queries, reach out to our team leads directly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Contacts - Middle Column */}
+            <div className="xl:col-span-1">
+              <h2 className="text-3xl font-bold text-express-purple mb-8 text-center">Our Team</h2>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-express-purple">Team Contacts</h3>
                 {contacts.map((contact, index) => (
                   <div 
                     key={index}
-                    className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl p-6 hover:border-express-purple/50 transition-all duration-300"
+                    className="group bg-gradient-to-r from-express-purple/10 via-transparent to-express-purple/5 backdrop-blur-sm border border-express-purple/30 rounded-2xl p-6 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500"
                   >
                     <div className="flex items-center space-x-4">
-                      <contact.icon className="text-express-purple" size={24} />
-                      <div>
-                        <h4 className="text-white font-semibold">{contact.role}</h4>
-                        <p className="text-gray-300">{contact.name}</p>
+                      <div className="bg-express-purple/20 p-3 rounded-full group-hover:bg-express-purple/30 transition-colors">
+                        <contact.icon className="text-express-purple" size={20} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-white font-bold text-lg">{contact.role}</h4>
+                        <p className="text-gray-300 font-medium">{contact.name}</p>
                         <a 
                           href={`tel:${contact.phone}`}
-                          className="text-express-purple hover:text-express-purple/80 transition-colors flex items-center space-x-2 mt-1"
+                          className="text-express-purple hover:text-white transition-colors flex items-center space-x-2 mt-2 text-sm font-medium group/phone"
                         >
-                          <Phone size={16} />
+                          <Phone size={14} className="group-hover/phone:scale-110 transition-transform" />
                           <span>{contact.phone}</span>
                         </a>
                       </div>
@@ -89,38 +112,41 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl overflow-hidden hover:border-express-purple/50 transition-all duration-300">
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-express-purple mb-4">Find Us Here</h3>
-                <div className="w-full h-96 rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0123456789!2d72.8261!3d19.1058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9578066a8d7%3A0x6de440c1d2c9a0c4!2sDJ%20Sanghvi%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1234567890123"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="DJ Sanghvi College of Engineering Location"
-                  ></iframe>
+            {/* Map - Right Column */}
+            <div className="xl:col-span-1">
+              <div className="group bg-gradient-to-br from-express-purple/10 to-transparent backdrop-blur-sm border border-express-purple/30 rounded-2xl overflow-hidden hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500 h-full">
+                <div className="p-6 pb-4">
+                  <h3 className="text-2xl font-bold text-express-purple mb-4 text-center">Find Us</h3>
+                </div>
+                <div className="px-6 pb-6">
+                  <div className="w-full h-80 xl:h-96 rounded-xl overflow-hidden border border-express-purple/20">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0123456789!2d72.8261!3d19.1058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9578066a8d7%3A0x6de440c1d2c9a0c4!2sDJ%20Sanghvi%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1234567890123"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="DJ Sanghvi College of Engineering Location"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Additional Contact Methods */}
-          <div className="w-full max-w-2xl">
-            <div className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl p-6 hover:border-express-purple/50 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-express-purple mb-4 text-center">Join Our Community</h3>
-              <p className="text-gray-300 text-center mb-6">
-                Follow us on social media and stay updated with our latest events, workshops, and competitions.
+          {/* Bottom CTA Section */}
+          <div className="text-center">
+            <div className="inline-block bg-gradient-to-r from-express-purple/20 via-express-purple/10 to-express-purple/20 backdrop-blur-sm border border-express-purple/40 rounded-3xl p-8 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500">
+              <h3 className="text-2xl font-bold text-express-purple mb-4">Ready to Express Yourself?</h3>
+              <p className="text-gray-300 max-w-md mx-auto mb-6 leading-relaxed">
+                Join our vibrant community of speakers, debaters, and communication enthusiasts. 
+                Let's build your voice together.
               </p>
-              <div className="flex justify-center space-x-4">
-                <div className="flex items-center space-x-2 text-express-purple">
-                  <Mail size={20} />
-                  <span>Coming Soon</span>
-                </div>
+              <div className="flex justify-center items-center space-x-2 text-express-purple">
+                <Mail size={20} className="animate-pulse" />
+                <span className="font-medium">Stay tuned for more ways to connect!</span>
               </div>
             </div>
           </div>
