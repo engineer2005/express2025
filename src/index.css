@@ -136,24 +136,24 @@
   width: 100%;
 }
 
-.express-button {
-  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-express-purple px-8 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-express-light hover:text-express-light;
+.sherlock-button {
+  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-sherlock-gold hover:text-sherlock-gold;
 }
 
-.express-button::before {
+.sherlock-button::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(136, 97, 255, 0.1);
+  background: hsl(var(--sherlock-gold) / 0.1);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: -1;
 }
 
-.express-button:hover::before {
+.sherlock-button:hover::before {
   transform: translateX(0);
 }
 
