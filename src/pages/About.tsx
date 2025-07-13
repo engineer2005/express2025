@@ -146,19 +146,19 @@ const About: React.FC = () => {
                       >
                         <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flippedCards.includes(card.id) ? 'rotate-y-180' : ''}`}>
                           {/* Front of card */}
-                          <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden">
-                            <div className="h-full flex flex-col bg-express-purple">
+                          <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden border border-sherlock-gold/30 backdrop-blur-sm">
+                            <div className="h-full flex flex-col bg-sherlock-shadow/60">
                               <div className="p-4 flex-1 flex items-center justify-center">
-                                <h3 className="text-white font-bold text-lg text-center">{card.title}</h3>
+                                <h3 className="text-sherlock-gold font-bold text-lg text-center text-shadow">{card.title}</h3>
                               </div>
                             </div>
                           </div>
                           
                           {/* Back of card */}
-                          <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden">
-                            <div className="h-full flex flex-col bg-express-purple/80">
+                          <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-sherlock-gold/30 backdrop-blur-sm">
+                            <div className="h-full flex flex-col bg-sherlock-shadow/80">
                               <div className="p-4 flex-1 flex items-center justify-center">
-                                <p className="text-white text-center">{card.description}</p>
+                                <p className="text-sherlock-parchment text-center text-shadow">{card.description}</p>
                               </div>
                             </div>
                           </div>

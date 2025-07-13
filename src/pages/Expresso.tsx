@@ -57,7 +57,7 @@ const Expresso: React.FC = () => {
     {
       number: 7,
       title: "June Edition",
-      url: "https://drive.google.com/drive/folders/1wl3DO5YX53zuQ6UYZ2AjFIzCMQ1ZMEvV",
+      url: "https://drive.google.com/file/d/16UeiAT9rFDROwK7skPAuENPBRv-2TRZ_/view?usp=drivesdk",
       description: "Fresh insights and stories from our June collection."
     }
   ];
@@ -100,23 +100,21 @@ const Expresso: React.FC = () => {
                   
                   <p className="text-gray-300 mb-6">{edition.description}</p>
                   
-                  <div className="flex flex-col space-y-3">
+                  <div className="flex gap-4 justify-center">
                     <button 
                       onClick={() => setSelectedEdition(edition)}
-                      className="express-button group text-left justify-start"
+                      className="sherlock-button group p-3 rounded-full"
+                      title="Preview Edition"
                     >
-                      <BookOpen size={18} className="mr-2" />
-                      <span>Preview</span>
-                      <ChevronRight size={16} className="ml-auto transition-transform group-hover:translate-x-1" />
+                      <BookOpen size={20} />
                     </button>
                     
                     <button 
                       onClick={() => handleOpenEdition(edition)}
-                      className="express-button group text-left justify-start"
+                      className="sherlock-button group p-3 rounded-full"
+                      title="Open in Drive"
                     >
-                      <ExternalLink size={18} className="mr-2" />
-                      <span>Open in Drive</span>
-                      <ChevronRight size={16} className="ml-auto transition-transform group-hover:translate-x-1" />
+                      <ExternalLink size={20} />
                     </button>
                   </div>
                 </div>

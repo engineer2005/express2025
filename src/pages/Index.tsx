@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import Logo from '../components/Logo';
 import { Link } from 'react-router-dom';
@@ -16,9 +16,27 @@ import sherlock2 from '../assets/sherlock-2.jpg';
 import sherlock3 from '../assets/sherlock-3.jpg';
 
 const Index: React.FC = () => {
+  const [api, setApi] = React.useState<any>();
+  const autoplayRef = useRef<NodeJS.Timeout>();
+
   useEffect(() => {
     document.title = 'eXpress - Public Speaking and Debating Committee';
   }, []);
+
+  useEffect(() => {
+    if (!api) return;
+
+    // Auto-scroll every 4 seconds
+    autoplayRef.current = setInterval(() => {
+      api.scrollNext();
+    }, 4000);
+
+    return () => {
+      if (autoplayRef.current) {
+        clearInterval(autoplayRef.current);
+      }
+    };
+  }, [api]);
 
   const sherlockImages = [
     { src: sherlock1, alt: "Sherlock Holmes in Victorian London" },
@@ -38,7 +56,14 @@ const Index: React.FC = () => {
           
           {/* Sherlock Holmes Carousel */}
           <div className="w-full max-w-4xl mb-8">
-            <Carousel className="w-full">
+            <Carousel 
+              className="w-full"
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
               <CarouselContent>
                 {sherlockImages.map((image, index) => (
                   <CarouselItem key={index}>
