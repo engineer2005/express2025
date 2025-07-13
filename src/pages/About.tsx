@@ -158,7 +158,7 @@ const About: React.FC = () => {
                           <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-sherlock-gold/30 backdrop-blur-sm">
                             <div className="h-full flex flex-col bg-sherlock-shadow/80">
                               <div className="p-4 flex-1 flex items-center justify-center">
-                                <p className="text-sherlock-parchment text-center text-shadow">{card.description}</p>
+                                <p className="text-white text-center text-shadow">{card.description}</p>
                               </div>
                             </div>
                           </div>

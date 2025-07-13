@@ -68,7 +68,7 @@ const Expresso: React.FC = () => {
 
   const getEmbedUrl = (url: string): string => {
     // Convert Google Drive view URL to embed URL
-    return url.replace("/view?usp=sharing", "/preview");
+    return url.replace(/\/view\?usp=(sharing|drivesdk)/, "/preview");
   };
 
   return (
