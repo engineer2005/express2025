@@ -25,10 +25,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				express: {
-					purple: '#8861FF',
-					dark: '#040512',
-					light: '#A98DFF'
+				sherlock: {
+					gold: 'hsl(var(--sherlock-gold))',
+					bronze: 'hsl(var(--sherlock-bronze))',
+					leather: 'hsl(var(--sherlock-leather))',
+					parchment: 'hsl(var(--sherlock-parchment))',
+					fog: 'hsl(var(--sherlock-fog))',
+					shadow: 'hsl(var(--sherlock-shadow))'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
