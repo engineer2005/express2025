@@ -51,7 +51,11 @@ const Index: React.FC = () => {
         <div className="flex flex-col items-center justify-center text-center max-w-5xl animate-fade-in">
           {/* Logo Section */}
           <div className="transform mb-8">
-            <Logo size="large" showText={true} />
+            <img 
+              src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png" 
+              alt="DJS eXpress" 
+              className="w-64 h-auto mx-auto"
+            />
           </div>
           
           {/* Sherlock Holmes Carousel */}
