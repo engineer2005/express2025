@@ -83,6 +83,15 @@ const PreviousEvents: React.FC = () => {
       ]
     },
     {
+      title: "Tick Tock Fall",
+      description: "Ticktock fall was a one-of-its-kind balloon debate in which participants imagined themselves in a hot air balloon which is sinking. The goal was to win approval of the audience by persuading them why they should not be thrown out of the balloon as there was not enough room for everyone to stay in the balloon and someone had to be ejected to save the rest.",
+      images: [
+        { src: e1, alt: "Tick Tock Fall - 1" },
+        { src: j2, alt: "Tick Tock Fall - 2" },
+        { src: m1, alt: "Tick Tock Fall - 3" }
+      ]
+    },
+    {
       title: "X-CON",
       description: "International MUN brought the world stage to our college! Students from various colleges converged to engage in lively debates, representing assigned countries. They tackled complex global issues, honing their research, public speaking, and diplomacy skills in a dynamic and competitive environment. It was a thrilling experience that fostered international understanding among many students, shaping future global leaders.",
       images: [
