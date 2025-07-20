@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import UpcomingEvents from "./pages/UpcomingEvents";
+import PreviousEvents from "./pages/PreviousEvents";
 import Team from "./pages/Team";
 import Expresso from "./pages/Expresso";
 import Contact from "./pages/Contact";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/upcoming-events" element={<UpcomingEvents />} />
+          <Route path="/previous-events" element={<PreviousEvents />} />
           <Route path="/team" element={<Team />} />
           <Route path="/expresso" element={<Expresso />} />
           <Route path="/contact" element={<Contact />} />
