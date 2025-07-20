@@ -28,11 +28,11 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { title: 'Home', path: '/' },
-    { title: 'About', path: '/about' },
     { title: 'Upcoming Events', path: '/upcoming-events' },
+    { title: 'eXpresso', path: '/expresso' },
     { title: 'Previous Events', path: '/previous-events' },
     { title: 'Team', path: '/team' },
-    { title: 'eXpresso', path: '/expresso' },
+    { title: 'About', path: '/about' },
     { title: 'Contact Us', path: '/contact' }
   ];
 
