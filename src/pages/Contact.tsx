@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Bottom CTA Section */}
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className="inline-block bg-gradient-to-r from-express-purple/20 via-express-purple/10 to-express-purple/20 backdrop-blur-sm border border-express-purple/40 rounded-3xl p-8 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500">
               <h3 className="text-2xl font-bold text-express-purple mb-4">Ready to Express Yourself?</h3>
               <p className="text-gray-300 max-w-md mx-auto mb-6 leading-relaxed">
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                 <span className="font-medium">Stay tuned for more ways to connect!</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/carousel";
 
 // Import event images
-import c1 from '../images/c1.jpg';
-import c2 from '../images/c2.jpg';
-import e1 from '../images/e1.jpg';
-import e2 from '../images/e2.jpg';
+import p1 from '../images/pil/p1.png';
+import p2 from '../images/pil/p2.jpg';
+import i1 from '../images/illuminare/i1.jpg';
+import i2 from '../images/illuminare/i2.jpg';
+import i3 from '../images/illuminare/i3.jpeg';
 import j1 from '../images/j1.jpg';
 import j2 from '../images/j2.jpg';
 import m1 from '../images/m1.jpg';
@@ -41,18 +42,18 @@ const PreviousEvents: React.FC = () => {
       title: "The Pilot: Episode 1",
       description: "The Pilot: Episode One was DJS eXpress' inter-college event that brought the world of sitcoms to life on campus. With meme battles, heated debates, quirky monologues, and hilarious parodies, participants showcased their wit, creativity, and spontaneity across four thrilling rounds. The event was packed with laughter, iconic pop culture moments, and electrifying performances — all making for an unforgettable experience that truly set the stage for what DJS eXpress stands for.",
       images: [
-        { src: s1, alt: "The Pilot Episode 1 - 1" },
-        { src: s2, alt: "The Pilot Episode 1 - 2" },
-        { src: e1, alt: "The Pilot Episode 1 - 3" }
+        { src: p1, alt: "The Pilot Episode 1 - 1" },
+        { src: p2, alt: "The Pilot Episode 1 - 2" },
+        { src: p1, alt: "The Pilot Episode 1 - 3" }
       ]
     },
     {
       title: "Illuminare",
       description: "Illuminare was a spectacular event that brought together creativity, knowledge, and innovation. Participants engaged in enlightening discussions, showcased their talents, and participated in activities that truly illuminated minds. The event fostered learning, creativity, and intellectual growth among students.",
       images: [
-        { src: e2, alt: "Illuminare - 1" },
-        { src: j1, alt: "Illuminare - 2" },
-        { src: j2, alt: "Illuminare - 3" }
+        { src: i1, alt: "Illuminare - 1" },
+        { src: i2, alt: "Illuminare - 2" },
+        { src: i3, alt: "Illuminare - 3" }
       ]
     },
     {
@@ -68,8 +69,8 @@ const PreviousEvents: React.FC = () => {
       title: "Court Charades",
       description: "Courtroom Charades is a battle of critical thinking, debate, and analytical skills. Participants form pairs and must defend their client while their opponents argue against them. Each team is assigned a case and their position, with 30 minutes to prepare using a provided dossier of basic case details. The goal: convince the audience, jury, and judge why their client is innocent — or guilty. It's a thrilling clash of wit, strategy, and persuasion — perfect for anyone who loves a good intellectual showdown.",
       images: [
-        { src: c1, alt: "Court Charades - 1" },
-        { src: c2, alt: "Court Charades - 2" },
+        { src: p1, alt: "Court Charades - 1" },
+        { src: p2, alt: "Court Charades - 2" },
         { src: o2, alt: "Court Charades - 3" }
       ]
     },
@@ -78,7 +79,7 @@ const PreviousEvents: React.FC = () => {
       description: "This event was a perfect combination of treasure hunt and creativity. In this event the participants were given clues which were cleverly scattered around in the college premises, with the help of these clues the participants wove amazing stories.",
       images: [
         { src: s1, alt: "Plot Pursuit - 1" },
-        { src: e1, alt: "Verse Voyage - 1" },
+        { src: i1, alt: "Verse Voyage - 1" },
         { src: j1, alt: "Plot Pursuit - 2" }
       ]
     },
@@ -86,7 +87,7 @@ const PreviousEvents: React.FC = () => {
       title: "Tick Tock Fall",
       description: "Ticktock fall was a one-of-its-kind balloon debate in which participants imagined themselves in a hot air balloon which is sinking. The goal was to win approval of the audience by persuading them why they should not be thrown out of the balloon as there was not enough room for everyone to stay in the balloon and someone had to be ejected to save the rest.",
       images: [
-        { src: e1, alt: "Tick Tock Fall - 1" },
+        { src: i1, alt: "Tick Tock Fall - 1" },
         { src: j2, alt: "Tick Tock Fall - 2" },
         { src: m1, alt: "Tick Tock Fall - 3" }
       ]
@@ -95,9 +96,9 @@ const PreviousEvents: React.FC = () => {
       title: "X-CON",
       description: "International MUN brought the world stage to our college! Students from various colleges converged to engage in lively debates, representing assigned countries. They tackled complex global issues, honing their research, public speaking, and diplomacy skills in a dynamic and competitive environment. It was a thrilling experience that fostered international understanding among many students, shaping future global leaders.",
       images: [
-        { src: e2, alt: "X-CON - 1" },
+        { src: i2, alt: "X-CON - 1" },
         { src: m1, alt: "X-CON - 2" },
-        { src: c1, alt: "X-CON - 3" }
+        { src: p1, alt: "X-CON - 3" }
       ]
     },
     {
@@ -114,7 +115,7 @@ const PreviousEvents: React.FC = () => {
       description: "This fun competition between different college departments brought everyone together to celebrate India's incredible heritage. Students put their knowledge to the test in a challenging quiz and a lively debate about important Indian topics. It was an exciting event that sparked a love for learning about India's rich history and traditions, leaving everyone feeling proud and connected to their roots.",
       images: [
         { src: o2, alt: "Aryavarta 1.0 - 1" },
-        { src: c2, alt: "Aryavarta 1.0 - 2" },
+        { src: p2, alt: "Aryavarta 1.0 - 2" },
         { src: s2, alt: "Aryavarta 1.0 - 3" }
       ]
     }
