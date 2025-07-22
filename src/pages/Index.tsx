@@ -1,12 +1,12 @@
 // src/pages/Index.tsx
-import React, { useEffect, useRef, useState } from 'react'; 
-import ParticleBackground from '../components/ParticleBackground';
-import Logo from '../components/Logo';
-import { Link } from 'react-router-dom'; 
-import { ChevronRight } from 'lucide-react'; 
+import React, { useEffect, useRef, useState } from "react";
+import ParticleBackground from "../components/ParticleBackground";
+import Logo from "../components/Logo";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 const Index: React.FC = () => {
-  const [api, setApi] = useState<any>(); 
+  const [api, setApi] = useState<any>();
   const autoplayRef = useRef<NodeJS.Timeout>();
 
   // --- NEW: State for our zoom animation ---
@@ -15,7 +15,7 @@ const Index: React.FC = () => {
   const zoomOutTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    document.title = 'eXpress - Public Speaking and Debating Committee';
+    document.title = "eXpress - Public Speaking and Debating Committee";
 
     // --- NEW: Timing for the zoom animation ---
     // 1. Trigger the zoom-in effect after a short delay
@@ -42,11 +42,13 @@ const Index: React.FC = () => {
   // --- NEW: Effect to control page scrolling during animation ---
   useEffect(() => {
     if (isZoomed) {
-      document.body.style.overflow = 'hidden'; // Stop page from scrolling
+      document.body.style.overflow = "hidden"; // Stop page from scrolling
     } else {
-      document.body.style.overflow = '';      // Let page scroll again
+      document.body.style.overflow = ""; // Let page scroll again
     }
-    return () => { document.body.style.overflow = ''; }; // Reset if component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    }; // Reset if component unmounts
   }, [isZoomed]); // Re-run whenever isZoomed changes
 
   // Your existing useEffect for auto-scrolling (kept as is)
@@ -68,31 +70,37 @@ const Index: React.FC = () => {
       <ParticleBackground />
 
       {/* Main content container - now applies blur when zoomed */}
-      <div className={`relative min-h-screen flex flex-col items-center justify-center z-10 px-6 pt-20 `}>
-        
+      <div
+        className={`relative min-h-screen flex flex-col items-center justify-center z-10 px-6 pt-20 `}
+      >
         {/* Your original logo and text container - now applies zoom/fade to text */}
-        <div className={`logo-and-text-container ${isZoomed ? 'logo-zoomed-out' : ''}`}> 
-        <img
-          src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png"
-          alt="DJS eXpress"
-          className="logo-image"
-        />
-        {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
-        <div className="text-group">
-            <span className="logo-text">
-              DJS eXpress
-            </span>
+        <div
+          className={`logo-and-text-container ${
+            isZoomed ? "logo-zoomed-out" : ""
+          }`}
+        >
+          <img
+            src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png"
+            alt="DJS eXpress"
+            className="logo-image"
+          />
+          {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
+          <div className="text-group">
+            <span className="logo-text">DJS eXpress</span>
             <p className="small-subtext">
-                #eXpressToInspire {/* <--- REPLACE THIS WITH YOUR TEXT */}
+              #eXpressToInspire {/* <--- REPLACE THIS WITH YOUR TEXT */}
             </p>
             <p className="small-subtext">
-                Public Speaking and Debate Committee {/* <--- REPLACE THIS WITH YOUR TEXT */}
+              Public Speaking and Debate Committee{" "}
+              {/* <--- REPLACE THIS WITH YOUR TEXT */}
             </p>
+          </div>
         </div>
-        </div> 
 
         {/* --- NEW: Container for the image that appears --- */}
-        <div className={`zoomed-content-wrapper ${isZoomed ? 'is-active' : ''}`}>
+        <div
+          className={`zoomed-content-wrapper ${isZoomed ? "is-active" : ""}`}
+        >
           <img
             src="a.png" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
             alt="Image appearing from text"
@@ -101,14 +109,13 @@ const Index: React.FC = () => {
           {/* You can add a special message here if you want it to appear with the image */}
           {/* <p className="zoomed-text">Welcome to DJS eXpress!</p> */}
         </div>
-        
+
         {/* The rest of your content will go here. */}
         {/* For now, just a placeholder. */}
         <div className="text-center text-foreground mt-8">
-            {/* Your other page content */}
+          {/* Your other page content */}
         </div>
-
-      </div> 
+      </div>
     </>
   );
 };
