@@ -1,32 +1,57 @@
-
-import React, { useEffect, useRef } from 'react';
+// src/pages/Index.tsx
+import React, { useEffect, useRef, useState } from 'react'; 
 import ParticleBackground from '../components/ParticleBackground';
 import Logo from '../components/Logo';
-import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import sherlock1 from '../assets/sherlock-1.jpg';
-import sherlock2 from '../assets/sherlock-2.jpg';
-import sherlock3 from '../assets/sherlock-3.jpg';
+import { Link } from 'react-router-dom'; 
+import { ChevronRight } from 'lucide-react'; 
 
 const Index: React.FC = () => {
-  const [api, setApi] = React.useState<any>();
+  const [api, setApi] = useState<any>(); 
   const autoplayRef = useRef<NodeJS.Timeout>();
+
+  // --- NEW: State for our zoom animation ---
+  const [isZoomed, setIsZoomed] = useState(false);
+  const initialAnimationTimeoutRef = useRef<NodeJS.Timeout>();
+  const zoomOutTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     document.title = 'eXpress - Public Speaking and Debating Committee';
-  }, []);
 
+    // --- NEW: Timing for the zoom animation ---
+    // 1. Trigger the zoom-in effect after a short delay
+    initialAnimationTimeoutRef.current = setTimeout(() => {
+      setIsZoomed(true); // Start the zoom-in animation
+
+      // 2. Trigger the zoom-out effect after the animation has been shown for a duration
+      zoomOutTimeoutRef.current = setTimeout(() => {
+        setIsZoomed(false); // Start the zoom-out animation
+      }, 5000); // Display the zoomed content for 5 seconds (5000 milliseconds)
+    }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
+
+    // Clean up any pending timeouts if the component goes away early
+    return () => {
+      if (initialAnimationTimeoutRef.current) {
+        clearTimeout(initialAnimationTimeoutRef.current);
+      }
+      if (zoomOutTimeoutRef.current) {
+        clearTimeout(zoomOutTimeoutRef.current);
+      }
+    };
+  }, []); // This effect runs only ONCE when the page first shows up
+
+  // --- NEW: Effect to control page scrolling during animation ---
+  useEffect(() => {
+    if (isZoomed) {
+      document.body.style.overflow = 'hidden'; // Stop page from scrolling
+    } else {
+      document.body.style.overflow = '';      // Let page scroll again
+    }
+    return () => { document.body.style.overflow = ''; }; // Reset if component unmounts
+  }, [isZoomed]); // Re-run whenever isZoomed changes
+
+  // Your existing useEffect for auto-scrolling (kept as is)
   useEffect(() => {
     if (!api) return;
-
-    // Auto-scroll every 4 seconds
     autoplayRef.current = setInterval(() => {
       api.scrollNext();
     }, 4000);
@@ -38,72 +63,52 @@ const Index: React.FC = () => {
     };
   }, [api]);
 
-  const sherlockImages = [
-    { src: sherlock1, alt: "Sherlock Holmes in Victorian London" },
-    { src: sherlock2, alt: "Baker Street 221B" },
-    { src: sherlock3, alt: "Detective's Tools" }
-  ];
-
   return (
     <>
       <ParticleBackground />
-      <div className="relative min-h-screen flex flex-col items-center justify-center z-10 px-6 pt-20">
-        <div className="flex flex-col items-center justify-center text-center max-w-5xl animate-fade-in">
-          {/* Logo Section */}
-          <div className="transform mb-8">
-            <img 
-              src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png" 
-              alt="DJS eXpress" 
-              className="w-64 h-auto mx-auto"
-            />
-          </div>
-          
-          {/* Sherlock Holmes Carousel */}
-          <div className="w-full max-w-4xl mb-8">
-            <Carousel 
-              className="w-full"
-              setApi={setApi}
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-              <CarouselContent>
-                {sherlockImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-[400px] object-cover rounded-lg border border-sherlock-bronze shadow-2xl"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-lg"></div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4 bg-sherlock-shadow/80 border-sherlock-gold text-sherlock-gold hover:bg-sherlock-gold hover:text-sherlock-shadow" />
-              <CarouselNext className="right-4 bg-sherlock-shadow/80 border-sherlock-gold text-sherlock-gold hover:bg-sherlock-gold hover:text-sherlock-shadow" />
-            </Carousel>
-          </div>
-          
-          {/* Call to Action */}
-          <div className="mt-4">
-            <Link to="/about" className="sherlock-button group">
-              <span className="font-semibold tracking-wider">ENTER THE WORLD OF MYSTERIES</span>
-              <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-          
-          {/* Atmospheric Quote */}
-          <div className="mt-8 max-w-2xl">
-            <blockquote className="text-sherlock-parchment/90 text-lg italic font-light leading-relaxed">
-              "When you have eliminated the impossible, whatever remains, however improbable, must be the truth."
-            </blockquote>
-            <cite className="text-sherlock-gold text-sm mt-2 block">— Sherlock Holmes</cite>
-          </div>
+
+      {/* Main content container - now applies blur when zoomed */}
+      <div className={`relative min-h-screen flex flex-col items-center justify-center z-10 px-6 pt-20 `}>
+        
+        {/* Your original logo and text container - now applies zoom/fade to text */}
+        <div className={`logo-and-text-container ${isZoomed ? 'logo-zoomed-out' : ''}`}> 
+        <img
+          src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png"
+          alt="DJS eXpress"
+          className="logo-image"
+        />
+        {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
+        <div className="text-group">
+            <span className="logo-text">
+              DJS eXpress
+            </span>
+            <p className="small-subtext">
+                #eXpressToInspire {/* <--- REPLACE THIS WITH YOUR TEXT */}
+            </p>
+            <p className="small-subtext">
+                Public Speaking and Debate Committee {/* <--- REPLACE THIS WITH YOUR TEXT */}
+            </p>
         </div>
-      </div>
+        </div> 
+
+        {/* --- NEW: Container for the image that appears --- */}
+        <div className={`zoomed-content-wrapper ${isZoomed ? 'is-active' : ''}`}>
+          <img
+            src="a.png" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
+            alt="Image appearing from text"
+            className="zoomed-image"
+          />
+          {/* You can add a special message here if you want it to appear with the image */}
+          {/* <p className="zoomed-text">Welcome to DJS eXpress!</p> */}
+        </div>
+        
+        {/* The rest of your content will go here. */}
+        {/* For now, just a placeholder. */}
+        <div className="text-center text-foreground mt-8">
+            {/* Your other page content */}
+        </div>
+
+      </div> 
     </>
   );
 };
