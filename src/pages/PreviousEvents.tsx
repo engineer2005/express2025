@@ -9,17 +9,17 @@ import {
 // Import event images
 import p1 from '../images/pil/p1.png';
 import p2 from '../images/pil/p2.jpg';
+import p3 from '../images/pil/p3.jpg';
 import i1 from '../images/illuminare/i1.jpg';
 import i2 from '../images/illuminare/i2.jpg';
 import i3 from '../images/illuminare/i3.jpeg';
-import j1 from '../images/j1.jpg';
-import j2 from '../images/j2.jpg';
-import m1 from '../images/m1.jpg';
-import m2 from '../images/m2.jpg';
-import o1 from '../images/o1 (1).jpg';
-import o2 from '../images/o2.jpg';
-import s1 from '../images/s1.jpg';
-import s2 from '../images/s2.jpg';
+import a1 from '../images/aryavarta/a1.jpg';
+import a2 from '../images/aryavarta/a2.png';
+import a3 from '../images/aryavarta/a3.jpg';
+import c1 from '../images/court/c1.png';
+import c2 from '../images/court/c2.jpeg';
+import c3 from '../images/court/c3.jpg';
+import t1 from '../images/tick/t1.png';
 
 interface EventImage {
   src: string;
@@ -44,7 +44,7 @@ const PreviousEvents: React.FC = () => {
       images: [
         { src: p1, alt: "The Pilot Episode 1 - 1" },
         { src: p2, alt: "The Pilot Episode 1 - 2" },
-        { src: p1, alt: "The Pilot Episode 1 - 3" }
+        { src: p3, alt: "The Pilot Episode 1 - 3" }
       ]
     },
     {
@@ -60,36 +60,36 @@ const PreviousEvents: React.FC = () => {
       title: "Aryavarta 3.0",
       description: "Aryavarta 3.0 marked the pinnacle of cultural celebration and intellectual discourse. This grand event brought together students from across colleges to participate in debates, cultural performances, and knowledge competitions. It celebrated India's rich heritage while fostering modern thinking and innovation.",
       images: [
-        { src: m1, alt: "Aryavarta 3.0 - 1" },
-        { src: m2, alt: "Aryavarta 3.0 - 2" },
-        { src: o1, alt: "Aryavarta 3.0 - 3" }
+        { src: a1, alt: "Aryavarta 3.0 - 1" },
+        { src: a2, alt: "Aryavarta 3.0 - 2" },
+        { src: a3, alt: "Aryavarta 3.0 - 3" }
       ]
     },
     {
       title: "Court Charades",
       description: "Courtroom Charades is a battle of critical thinking, debate, and analytical skills. Participants form pairs and must defend their client while their opponents argue against them. Each team is assigned a case and their position, with 30 minutes to prepare using a provided dossier of basic case details. The goal: convince the audience, jury, and judge why their client is innocent — or guilty. It's a thrilling clash of wit, strategy, and persuasion — perfect for anyone who loves a good intellectual showdown.",
       images: [
-        { src: p1, alt: "Court Charades - 1" },
-        { src: p2, alt: "Court Charades - 2" },
-        { src: o2, alt: "Court Charades - 3" }
+        { src: c1, alt: "Court Charades - 1" },
+        { src: c2, alt: "Court Charades - 2" },
+        { src: c3, alt: "Court Charades - 3" }
       ]
     },
     {
       title: "Plot Pursuit | Verse Voyage",
       description: "This event was a perfect combination of treasure hunt and creativity. In this event the participants were given clues which were cleverly scattered around in the college premises, with the help of these clues the participants wove amazing stories.",
       images: [
-        { src: s1, alt: "Plot Pursuit - 1" },
+        { src: p1, alt: "Plot Pursuit - 1" },
         { src: i1, alt: "Verse Voyage - 1" },
-        { src: j1, alt: "Plot Pursuit - 2" }
+        { src: a1, alt: "Plot Pursuit - 2" }
       ]
     },
     {
       title: "Tick Tock Fall",
       description: "Ticktock fall was a one-of-its-kind balloon debate in which participants imagined themselves in a hot air balloon which is sinking. The goal was to win approval of the audience by persuading them why they should not be thrown out of the balloon as there was not enough room for everyone to stay in the balloon and someone had to be ejected to save the rest.",
       images: [
-        { src: i1, alt: "Tick Tock Fall - 1" },
-        { src: j2, alt: "Tick Tock Fall - 2" },
-        { src: m1, alt: "Tick Tock Fall - 3" }
+        { src: t1, alt: "Tick Tock Fall - 1" },
+        { src: p2, alt: "Tick Tock Fall - 2" },
+        { src: a1, alt: "Tick Tock Fall - 3" }
       ]
     },
     {
@@ -97,7 +97,7 @@ const PreviousEvents: React.FC = () => {
       description: "International MUN brought the world stage to our college! Students from various colleges converged to engage in lively debates, representing assigned countries. They tackled complex global issues, honing their research, public speaking, and diplomacy skills in a dynamic and competitive environment. It was a thrilling experience that fostered international understanding among many students, shaping future global leaders.",
       images: [
         { src: i2, alt: "X-CON - 1" },
-        { src: m1, alt: "X-CON - 2" },
+        { src: a1, alt: "X-CON - 2" },
         { src: p1, alt: "X-CON - 3" }
       ]
     },
@@ -105,18 +105,18 @@ const PreviousEvents: React.FC = () => {
       title: "Aryavarta 2.0",
       description: "Aryavarta 2.0 celebrated the vibrant spirit of Indian Culture. This captivating interdepartmental event consisted of two exhilarating days filled with knowledge, camaraderie, and excitement, deepening one's appreciation for our glorious past. Participants engaged in thrilling quizzes and lively debates promoting India's rich heritage and legacy.",
       images: [
-        { src: j2, alt: "Aryavarta 2.0 - 1" },
-        { src: m2, alt: "Aryavarta 2.0 - 2" },
-        { src: o1, alt: "Aryavarta 2.0 - 3" }
+        { src: a2, alt: "Aryavarta 2.0 - 1" },
+        { src: p2, alt: "Aryavarta 2.0 - 2" },
+        { src: i1, alt: "Aryavarta 2.0 - 3" }
       ]
     },
     {
       title: "Aryavarta 1.0",
       description: "This fun competition between different college departments brought everyone together to celebrate India's incredible heritage. Students put their knowledge to the test in a challenging quiz and a lively debate about important Indian topics. It was an exciting event that sparked a love for learning about India's rich history and traditions, leaving everyone feeling proud and connected to their roots.",
       images: [
-        { src: o2, alt: "Aryavarta 1.0 - 1" },
+        { src: a2, alt: "Aryavarta 1.0 - 1" },
         { src: p2, alt: "Aryavarta 1.0 - 2" },
-        { src: s2, alt: "Aryavarta 1.0 - 3" }
+        { src: i2, alt: "Aryavarta 1.0 - 3" }
       ]
     }
   ];
