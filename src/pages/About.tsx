@@ -146,7 +146,7 @@ const About: React.FC = () => {
                       >
                         <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flippedCards.includes(card.id) ? 'rotate-y-180' : ''}`}>
                           {/* Front of card */}
-                           <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden border border-yellow-400/60">
+                           <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden border border-express-purple/60">
                              <div className="h-full flex flex-col bg-black/20">
                                <div className="p-4 flex-1 flex items-center justify-center">
                                  <h3 className="text-white font-bold text-lg text-center">{card.title}</h3>
@@ -155,7 +155,7 @@ const About: React.FC = () => {
                            </div>
                            
                            {/* Back of card */}
-                           <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-yellow-400/60">
+                           <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-express-purple/60">
                              <div className="h-full flex flex-col bg-black/20">
                                <div className="p-4 flex-1 flex items-center justify-center">
                                  <p className="text-white text-center">{card.description}</p>
@@ -196,10 +196,6 @@ const About: React.FC = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <p className="inline-flex items-center gap-2 bg-express-purple/20 text-express-light px-6 py-3 rounded-full border border-express-purple/30 animate-float">
-              <MessageSquare className="h-5 w-5 text-express-purple" />
-              Join us in our journey of intellectual growth and public speaking excellence!
-            </p>
           </div>
         </div>
       </div>

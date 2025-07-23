@@ -149,7 +149,7 @@ const Team: React.FC = () => {
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-2xl font-playfair font-semibold text-white mb-2">{member.name}</h3>
-      <p className="text-express-purple mt-1 font-bold text-lg">{member.role}</p>
+      <p className="text-custom-white mt-1 font-bold text-lg">{member.role}</p>
     </div>
   );
 
@@ -160,7 +160,7 @@ const Team: React.FC = () => {
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
       <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
-      <p className="text-express-purple mt-1 font-bold">{member.role}</p>
+      <p className="text-custom-white  mt-1 font-bold">{member.role}</p>
     </div>
   );
 

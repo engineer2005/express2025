@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,30 +13,34 @@ import Team from "./pages/Team";
 import Expresso from "./pages/Expresso";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import NewsTicker from "@/components/NewsTicker";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/upcoming-events" element={<UpcomingEvents />} />
-          <Route path="/previous-events" element={<PreviousEvents />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/expresso" element={<Expresso />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/upcoming-events" element={<UpcomingEvents />} />
+            <Route path="/previous-events" element={<PreviousEvents />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/expresso" element={<Expresso />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+          {/*<NewsTicker />*/}
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </>
 );
 
 export default App;
