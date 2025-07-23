@@ -26,6 +26,8 @@ import arya2 from '../images/aryavarta2/arya2.jpg';
 import x1 from '../images/xcon/x1.jpeg';
 import x2 from '../images/xcon/x2.jpeg';
 import x3 from '../images/xcon/x3.jpeg';
+import pl1 from '../images/plot/p1.png';
+import pl2 from '../images/plot/p2.png';
 
 interface EventImage {
   src: string;
@@ -54,7 +56,7 @@ const PreviousEvents: React.FC = () => {
       ]
     },
     {
-      title: "Illuminare",
+      title: "illuminare",
       description: "Illuminare was a spectacular event that brought together creativity, knowledge, and innovation. Participants engaged in enlightening discussions, showcased their talents, and participated in activities that truly illuminated minds. The event fostered learning, creativity, and intellectual growth among students.",
       images: [
         { src: i1, alt: "Illuminare - 1" },
@@ -84,9 +86,9 @@ const PreviousEvents: React.FC = () => {
       title: "Plot Pursuit | Verse Voyage",
       description: "This event was a perfect combination of treasure hunt and creativity. In this event the participants were given clues which were cleverly scattered around in the college premises, with the help of these clues the participants wove amazing stories.",
       images: [
-        { src: p1, alt: "Plot Pursuit - 1" },
-        { src: i1, alt: "Verse Voyage - 1" },
-        { src: a1, alt: "Plot Pursuit - 2" }
+        { src: pl1, alt: "Plot Pursuit - 1" },
+        { src: pl2, alt: "Verse Voyage - 1" },
+        { src: x3, alt: "Plot Pursuit - 2" }
       ]
     },
     {
