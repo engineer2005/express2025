@@ -24,9 +24,9 @@
 
 .logo-image {
   /* RESPONSIVE IMPROVEMENT: Flexible width for the logo */
-  width: clamp(64px, 15vw, 256px);
+  width: clamp(80px, 15vw, 256px);
   height: auto; /* Maintain aspect ratio */
-  margin-right: 1.25rem; /* Equivalent to 20px, using rem for consistency */
+  margin-right: 0rem; /* Equivalent to 20px, using rem for consistency */
 
   @media (max-width: 640px) {
     margin-right: 0; /* Remove horizontal margin when stacked */
@@ -44,14 +44,14 @@
 }
 
 .logo-text {
-  font-size: 7em;
-  color: rgb(242, 246, 225);
+  font-size: 6.2em;
+  color: #8e69b5;
   background-color: transparent;
   font-weight: bold;
   white-space: normal;
 
   /* --- THICKER PURPLE TEXT BORDER/OUTLINE EFFECT --- */
-  text-shadow: -2px -2px 0px #ab65fa,
+  text-shadow: -2px -2px 0px #ffffff,
     /* Increased to 2px */ 2px -2px 0px #ab65fa,
     /* Increased to 2px */ -2px 2px 0px #ab65fa,
     /* Increased to 2px */ 2px 2px 0px #ab65fa; /* Increased to 2px */
@@ -67,7 +67,7 @@
   color: #ab65fa; /* Adjust color to fit your theme */
   margin-top: 0.5rem; /* Adds a little space between main text and subtext */
   white-space: nowrap; /* Prevents the subtext from wrapping if it's short */
-  font-weight: normal; /* Ensure it's not bold */
+  font-weight: 100px; /* Ensure it's not bold */
   text-shadow: none; /* Remove text-shadow if inherited */
   /* --- IMPORTANT: REMOVED z-index and position: relative here --- */
   /* This text will now fade out properly with its parent .logo-and-text-container */

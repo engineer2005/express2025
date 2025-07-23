@@ -73,9 +73,13 @@ const UpcomingEvents: React.FC = () => {
 
                 <div className="md:w-2/3">
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-                    <h2 className="text-3xl font-semibold text-white font-playfair">
+                    <a className="text-3xl font-semibold text-white font-playfair"
+                      href="https://drive.google.com/file/d/1KsJkJ8DgYLYeqNNlOlTuMsWLMLmTjbKw/view?usp=sharing"
+                      target="_blank"
+                      aria-label="Veritas: A Scandal of Expression"
+                    >
                       Veritas : A scandal of expression
-                    </h2>
+                    </a>
                     <div className="mt-2 sm:mt-0">
                       {/*<span className="bg-express-purple/50 text-white px-3 py-1 rounded-full text-sm font-bold">
                         Registration Closed
