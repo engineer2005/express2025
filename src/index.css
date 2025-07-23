@@ -76,11 +76,11 @@
 @layer base {
   :root {
     /* Sherlock Holmes Victorian Theme - Light Mode */
-    --background: 35 25% 8%;
+    --background: 0 0% 0%;
     --foreground: 40 10% 85%;
 
     --card: 35 20% 12%;
-    --card-foreground: 40 10% 85%;
+    --card-foreground:  270 20% 92%;
 
     --popover: 35 20% 12%;
     --popover-foreground: 40 10% 85%;
@@ -112,7 +112,7 @@
     --sherlock-leather: 25 35% 25%;
     --sherlock-parchment: 40 20% 75%;
     --sherlock-fog: 210 15% 50%;
-    --sherlock-shadow: 35 25% 5%;
+    --sherlock-shadow: 270 50% 30%;
 
     --sidebar-background: 35 20% 10%;
     --sidebar-foreground: 40 10% 75%;
@@ -125,7 +125,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 270 50% 10%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -177,6 +177,9 @@
       linear-gradient(135deg, hsl(var(--background)), hsl(var(--sherlock-shadow))); */
     background-attachment: fixed;
   }
+  body::-webkit-scrollbar {
+  display: none;
+  }
 
   /* Enhanced text visibility */
   h1,
@@ -198,13 +201,13 @@
   /* Ensure good contrast for all text elements */
   .text-high-contrast {
     @apply text-sherlock-parchment;
-    text-shadow: 0 1px 2px hsl(var(--sherlock-shadow) / 0.8);
+    text-shadow: 0 1px 2px hsl(var(express-purple) / 0.8);
   }
 
   /* Card backgrounds for better readability */
   .content-card {
     @apply bg-card/80 backdrop-blur-sm border border-sherlock-bronze/30 rounded-lg p-6;
-    box-shadow: 0 8px 32px hsl(var(--sherlock-shadow) / 0.3);
+    box-shadow: 0 8px 32px hsl(var(express-purple) / 0.3);
   }
 }
 
@@ -239,7 +242,8 @@
 }
 
 .sherlock-button {
-  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-sherlock-gold hover:text-sherlock-gold;
+  @apply relative inline-flex items-center justify-center overflow-hidden rounded-full border border-primary px-8 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-express-purple hover:text-express-purple;
+  border: 2px solid #a289c1;
 }
 
 .sherlock-button::before {
@@ -249,10 +253,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsl(var(--sherlock-gold) / 0.1);
+  background: hsl(var(express-purple) / 0.1);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: -1;
+}
+.light-purple-shadow {
+  box-shadow: 0 4px 24px 0 rgba(171, 101, 250, 0.15);
 }
 
 .sherlock-button:hover::before {

@@ -10,10 +10,10 @@ import {
   Instagram,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import bigbang from "../images/bigbang.png";
-import how from "../images/how.png";
-import modern from "../images/modern.png";
-import friends from "../images/friends.png";
+import sherlock2 from "../images/sherlock2.jpeg";
+import sherlock1 from "../images/sherlock1.jpeg";
+import sherlock3 from "../images/sherlock3.jpeg";
+import sherlock4 from "../images/sherlock4.jpeg";
 import Footer from "@/components/Footer";
 
 const UpcomingEvents: React.FC = () => {
@@ -23,7 +23,7 @@ const UpcomingEvents: React.FC = () => {
 
   const handleRegister = () => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSel_E5va__3Yq7HGNJZANmqdLrX4_1KrWkqxli_-PnziHsR-Q/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSex0PAOw7S13GpJX4onbBJz2lT0jnJsjDR6jP2_NsFTj9ST8g/viewform",
       "_blank"
     );
   };
@@ -48,22 +48,23 @@ const UpcomingEvents: React.FC = () => {
                   <div className="bg-black/50 rounded-lg overflow-hidden h-64 mb-4">
                     <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-1">
                       <img
-                        src={bigbang}
+                        src={sherlock2}
+                        alt="sherlock2"
                         className="object-cover w-full h-full"
                       />
                       <img
-                        src={how}
-                        alt="How I Met Your Mother"
+                        src={sherlock1}
+                        alt="sherlock1"
                         className="object-cover w-full h-full"
                       />
                       <img
-                        src={modern}
-                        alt="Modern Family"
+                        src={sherlock3}
+                        alt="sherlock3"
                         className="object-cover w-full h-full"
                       />
                       <img
-                        src={friends}
-                        alt="Friends"
+                        src={sherlock4}
+                        alt="sherlock4"
                         className="object-cover w-full h-full"
                       />
                     </div>
@@ -73,12 +74,12 @@ const UpcomingEvents: React.FC = () => {
                 <div className="md:w-2/3">
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                     <h2 className="text-3xl font-semibold text-white font-playfair">
-                      The Pilot: Episode 1
+                      Veritas : A scandal of expression
                     </h2>
                     <div className="mt-2 sm:mt-0">
-                      <span className="bg-express-purple/50 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      {/*<span className="bg-express-purple/50 text-white px-3 py-1 rounded-full text-sm font-bold">
                         Registration Closed
-                      </span>
+                      </span>*/}
                     </div>
                   </div>
 
@@ -101,20 +102,19 @@ const UpcomingEvents: React.FC = () => {
                   </div>
 
                   <p className="text-gray-300 mb-6">
-                    🌟 Join DJS eXpress's Inaugural Event:{" "}
+                    🌟 Join DJS eXpress's :{" "}
                     <span className="font-bold text-white">
-                      THE PILOT: EP 1
+                      Veritas: A Scandal of Expression
                     </span>{" "}
-                    🎬✨
+                    🕵️‍♂️🎩🔎
                   </p>
 
                   <p className="text-gray-300 mb-6">
-                    Get ready to dive into the world of laughter, wit, and
-                    iconic moments as Teams of Two battle it out in an exciting
-                    sitcom-themed challenge! From classic quizzes and debates to
-                    fun parody games, this event is your chance to star in your
-                    very own pilot episode! 🎭📺 Get Ready for a sitcom
-                    extravaganza!
+                  🕵️‍♂️ The game is afoot!
+                  Join Teams of Two in a Sherlock-inspired showdown packed with mystery, wit,
+                  and a dash of drama! From clever debates to thrilling games, step into your 
+                  own episode of deduction and deception. Get ready to solve, perform, and 
+                  steal the spotlight! 🔍🎭
                   </p>
 
                   <div className="bg-express-purple/20 rounded-lg p-4 mb-6">
@@ -124,12 +124,12 @@ const UpcomingEvents: React.FC = () => {
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div className="bg-black/30 p-4 rounded-lg text-center">
-                        <span className="text-lg font-bold text-express-light">
+                        {/*<span className="text-lg font-bold text-express-light">
                           1st Place
-                        </span>
-                        <p className="text-white font-bold text-2xl">₹4,000</p>
+                        </span>*/}
+                        <p className="text-white font-bold text-2xl">₹50,000</p>
                       </div>
-                      <div className="bg-black/30 p-4 rounded-lg text-center">
+                      {/*<div className="bg-black/30 p-4 rounded-lg text-center">
                         <span className="text-lg font-bold text-express-light">
                           2nd Place
                         </span>
@@ -140,7 +140,7 @@ const UpcomingEvents: React.FC = () => {
                           3rd Place
                         </span>
                         <p className="text-white font-bold text-2xl">₹1,500</p>
-                      </div>
+                      </div>*/}
                     </div>
                   </div>
 
@@ -167,10 +167,9 @@ const UpcomingEvents: React.FC = () => {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       onClick={handleRegister}
-                      className="express-button group"
-                      disabled
+                      className="bg-express-purple text-white hover:bg-express-purple/90 transition-colors group"
                     >
-                      <span>REGISTRATION CLOSED</span>
+                      <span>REGISTER HERE</span>
                       <ExternalLink size={16} />
                     </Button>
 
@@ -189,6 +188,8 @@ const UpcomingEvents: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-12 text-center">
       </div>
     </>
   );

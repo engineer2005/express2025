@@ -5,6 +5,7 @@ import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
+
 const Index: React.FC = () => {
   const [api, setApi] = useState<any>();
   const autoplayRef = useRef<NodeJS.Timeout>();
@@ -75,9 +76,8 @@ const Index: React.FC = () => {
       >
         {/* Your original logo and text container - now applies zoom/fade to text */}
         <div
-          className={`logo-and-text-container ${
-            isZoomed ? "logo-zoomed-out" : ""
-          }`}
+          className={`logo-and-text-container ${isZoomed ? "logo-zoomed-out" : ""
+            }`}
         >
           <img
             src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png"
@@ -97,21 +97,30 @@ const Index: React.FC = () => {
           </div>
         </div>
 
+        {/* --- NEW: Zoomed content wrapper that appears when zoomed in --- */}
         {/* --- NEW: Container for the image that appears --- */}
         <div
           className={`zoomed-content-wrapper ${isZoomed ? "is-active" : ""}`}
         >
           <img
-            src="a.png" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
+            src="sherlock.jpeg" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
             alt="Image appearing from text"
             className="zoomed-image"
           />
           {/* You can add a special message here if you want it to appear with the image */}
           {/* <p className="zoomed-text">Welcome to DJS eXpress!</p> */}
         </div>
+        {/* Call to Action */}
+        <div className="mt-4">
+          <Link to="/upcoming-events" className="sherlock-button group">
+            <span className="font-semibold tracking-wider">Know More</span>
+            <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
 
         {/* The rest of your content will go here. */}
         {/* For now, just a placeholder. */}
+
         <div className="text-center text-foreground mt-8">
           {/* Your other page content */}
         </div>

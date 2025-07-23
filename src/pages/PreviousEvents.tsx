@@ -9,17 +9,23 @@ import {
 // Import event images
 import p1 from '../images/pil/p1.png';
 import p2 from '../images/pil/p2.jpg';
-//import p3 from '../images/pil/p3.jpg';
+import p3 from '../images/pil/p3.jpg';
 import i1 from '../images/illuminare/i1.jpg';
 import i2 from '../images/illuminare/i2.jpg';
 import i3 from '../images/illuminare/i3.jpeg';
-//import a1 from '../images/aryavarta/a1.jpg';
-//import a2 from '../images/aryavarta/a2.png';
-//import a3 from '../images/aryavarta/a3.jpg';
-//import c1 from '../images/court/c1.png';
-//import c2 from '../images/court/c2.jpeg';
-//import c3 from '../images/court/c3.jpg';
-//import t1 from '../images/tick/t1.png';
+import a1 from '../images/aryavarta/a1.jpg';
+import a2 from '../images/aryavarta/a2.jpg';
+import a3 from '../images/aryavarta/a3.jpg';
+import c1 from '../images/court/c1.jpg';
+import c2 from '../images/court/c2.jpg';
+import c3 from '../images/court/c3.jpg';
+import t1 from '../images/tick/t1.jpg';
+import t2 from '../images/tick/t2.jpg';
+import t3 from '../images/tick/t3.jpg';
+import arya2 from '../images/aryavarta2/arya2.jpg';
+import x1 from '../images/xcon/x1.jpeg';
+import x2 from '../images/xcon/x2.jpeg';
+import x3 from '../images/xcon/x3.jpeg';
 
 interface EventImage {
   src: string;
@@ -88,17 +94,17 @@ const PreviousEvents: React.FC = () => {
       description: "Ticktock fall was a one-of-its-kind balloon debate in which participants imagined themselves in a hot air balloon which is sinking. The goal was to win approval of the audience by persuading them why they should not be thrown out of the balloon as there was not enough room for everyone to stay in the balloon and someone had to be ejected to save the rest.",
       images: [
         { src: t1, alt: "Tick Tock Fall - 1" },
-        { src: p2, alt: "Tick Tock Fall - 2" },
-        { src: a1, alt: "Tick Tock Fall - 3" }
+        { src: t2, alt: "Tick Tock Fall - 2" },
+        { src: t3, alt: "Tick Tock Fall - 3" }
       ]
     },
     {
       title: "X-CON",
       description: "International MUN brought the world stage to our college! Students from various colleges converged to engage in lively debates, representing assigned countries. They tackled complex global issues, honing their research, public speaking, and diplomacy skills in a dynamic and competitive environment. It was a thrilling experience that fostered international understanding among many students, shaping future global leaders.",
       images: [
-        { src: i2, alt: "X-CON - 1" },
-        { src: a1, alt: "X-CON - 2" },
-        { src: p1, alt: "X-CON - 3" }
+        { src: x1, alt: "X-CON - 1" },
+        { src: x2, alt: "X-CON - 2" },
+        { src: x3, alt: "X-CON - 3" }
       ]
     },
     {
@@ -115,7 +121,7 @@ const PreviousEvents: React.FC = () => {
       description: "This fun competition between different college departments brought everyone together to celebrate India's incredible heritage. Students put their knowledge to the test in a challenging quiz and a lively debate about important Indian topics. It was an exciting event that sparked a love for learning about India's rich history and traditions, leaving everyone feeling proud and connected to their roots.",
       images: [
         { src: a2, alt: "Aryavarta 1.0 - 1" },
-        { src: p2, alt: "Aryavarta 1.0 - 2" },
+        { src: arya2, alt: "Aryavarta 1.0 - 2" },
         { src: i2, alt: "Aryavarta 1.0 - 3" }
       ]
     }
@@ -156,7 +162,7 @@ const PreviousEvents: React.FC = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-64 object-cover rounded-2xl border-4 border-gradient-primary shadow-xl"
+                  className="w-full h-64 object-cover rounded-2xl border-4 border-express-purple-glow/80 light-purple-shadow"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
               </div>
@@ -174,7 +180,7 @@ const PreviousEvents: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           {/* Page Title */}
           <div className="text-center mb-20">
-            <h1 className="text-6xl font-bold text-transparent bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text mb-6">
+            <h1 className="text-6xl font-bold text-express-purple mb-6">
               Previous Events
             </h1>
             <p className="text-muted-foreground text-xl max-w-3xl mx-auto">
@@ -198,7 +204,7 @@ const PreviousEvents: React.FC = () => {
 
                 {/* Event Content */}
                 <div className="flex-1 space-y-6">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-gradient-to-r from-accent to-primary bg-clip-text">
+                  <h2 className="text-4xl lg:text-5xl font-bold text-express-purple-glow">
                     {event.title}
                   </h2>
                   <p className="text-foreground/90 text-lg leading-relaxed">
