@@ -4,6 +4,7 @@ import ParticleBackground from "../components/ParticleBackground";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import Footer from "../components/Footer";
 
 
 const Index: React.FC = () => {
@@ -118,11 +119,12 @@ const Index: React.FC = () => {
           </Link>
         </div>
 
-        {/* The rest of your content will go here. */}
-        {/* For now, just a placeholder. */}
-
         <div className="text-center text-foreground mt-8">
           {/* Your other page content */}
+        </div>
+
+        <div className="fixed bottom-0 left-0 w-full z-50">
+          <Footer />
         </div>
       </div>
     </>

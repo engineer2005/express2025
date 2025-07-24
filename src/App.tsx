@@ -13,7 +13,7 @@ import Team from "./pages/Team";
 import Expresso from "./pages/Expresso";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import NewsTicker from "@/components/NewsTicker";
+
 
 const queryClient = new QueryClient();
 
@@ -36,7 +36,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
-          {/*<NewsTicker />*/}
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

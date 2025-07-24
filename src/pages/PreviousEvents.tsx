@@ -26,8 +26,8 @@ import arya2 from '../images/aryavarta2/arya2.jpg';
 import x1 from '../images/xcon/x1.jpeg';
 import x2 from '../images/xcon/x2.jpeg';
 import x3 from '../images/xcon/x3.jpeg';
-import pl1 from '../images/plot/p1.png';
-import pl2 from '../images/plot/p2.png';
+//import pl1 from '../images/plot/p1.png';
+//import pl2 from '../images/plot/p2.png';
 
 interface EventImage {
   src: string;
@@ -86,8 +86,8 @@ const PreviousEvents: React.FC = () => {
       title: "Plot Pursuit | Verse Voyage",
       description: "This event was a perfect combination of treasure hunt and creativity. In this event the participants were given clues which were cleverly scattered around in the college premises, with the help of these clues the participants wove amazing stories.",
       images: [
-        { src: pl1, alt: "Plot Pursuit - 1" },
-        { src: pl2, alt: "Verse Voyage - 1" },
+        //{ src: pl1, alt: "Plot Pursuit - 1" },
+        //{ src: pl2, alt: "Verse Voyage - 1" },
         { src: x3, alt: "Plot Pursuit - 2" }
       ]
     },

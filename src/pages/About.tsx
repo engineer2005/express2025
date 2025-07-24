@@ -6,19 +6,20 @@ import { Card, CardContent } from '../components/ui/card';
 import { Users, Globe, BookOpen, School, Speech, Award, Lightbulb, MessageSquare } from 'lucide-react';
 import logo from '../images/logo.png'
 
+
 const About: React.FC = () => {
   useEffect(() => {
     document.title = 'About Us - express';
   }, []);
-  
+
   const isMobile = useIsMobile();
-  
+
   // State to track which cards are flipped
   const [flippedCards, setFlippedCards] = useState<number[]>([]);
 
   // Toggle flip state for a card
   const toggleFlip = (id: number) => {
-    setFlippedCards(prev => 
+    setFlippedCards(prev =>
       prev.includes(id) ? prev.filter(cardId => cardId !== id) : [...prev, id]
     );
   };
@@ -67,7 +68,7 @@ const About: React.FC = () => {
             </h1>
             <div className="h-1 w-24 md:w-32 bg-express-purple mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
@@ -78,7 +79,7 @@ const About: React.FC = () => {
                 <p className="text-gray-300 text-center">A vibrant community of passionate debaters and public speakers from DJ Sanghvi College of Engineering.</p>
               </div>
             </div>
-            
+
             <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
                 <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
@@ -88,7 +89,7 @@ const About: React.FC = () => {
                 <p className="text-gray-300 text-center">The largest audiences and highest participant registrations across college events in the city.</p>
               </div>
             </div>
-            
+
             <div className="backdrop-blur-sm border border-express-purple/30 rounded-lg p-6 transition-all duration-300 hover:border-express-purple hover:shadow-lg hover:shadow-express-purple/20 group">
               <div className="flex flex-col items-center">
                 <div className="bg-express-purple/20 p-4 rounded-full mb-4 group-hover:bg-express-purple/30 transition-all">
@@ -99,15 +100,16 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="space-y-8 mt-8">
             <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
                 <div className="md:w-1/3 flex items-center justify-center p-6">
-                  <img 
-                    src={logo} 
-                    alt="DJS eXpress logo" 
-                    className="w-48 h-auto object-contain"
+                  <img
+                    src={logo}
+                    alt="DJS eXpress logo"
+                    style={{ width: "130px" }}
+                    className="h-auto object-contain"
                   />
                 </div>
                 <CardContent className="md:w-2/3 p-6">
@@ -123,7 +125,7 @@ const About: React.FC = () => {
                 </CardContent>
               </div>
             </Card>
-            
+
             <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
                 <CardContent className="w-full p-6">
@@ -136,32 +138,32 @@ const About: React.FC = () => {
                   <p className="text-gray-300 leading-relaxed mb-6">
                     At DJS eXpress, we strive to unlock the potential of every student, ranging from public speaking skills to critical thinking to confident self-expression. We organise debates and discussions related to real world problems and work on finding solutions. Our community empowers students to explore intellectual curiosity and equip them with skills needed in the ever-evolving world. We provide an environment for students to grow through our events which makes us unique as the entire process is a learning experience.
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                     {flashcards.map((card) => (
-                      <div 
-                        key={card.id} 
+                      <div
+                        key={card.id}
                         className={`h-64 cursor-pointer perspective-1000`}
                         onClick={() => toggleFlip(card.id)}
                       >
                         <div className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${flippedCards.includes(card.id) ? 'rotate-y-180' : ''}`}>
                           {/* Front of card */}
-                           <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden border border-express-purple/60">
-                             <div className="h-full flex flex-col bg-black/20">
-                               <div className="p-4 flex-1 flex items-center justify-center">
-                                 <h3 className="text-white font-bold text-lg text-center">{card.title}</h3>
-                               </div>
-                             </div>
-                           </div>
-                           
-                           {/* Back of card */}
-                           <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-express-purple/60">
-                             <div className="h-full flex flex-col bg-black/20">
-                               <div className="p-4 flex-1 flex items-center justify-center">
-                                 <p className="text-white text-center">{card.description}</p>
-                               </div>
-                             </div>
-                           </div>
+                          <div className="absolute w-full h-full backface-hidden rounded-lg overflow-hidden border border-express-purple/60">
+                            <div className="h-full flex flex-col bg-black/20">
+                              <div className="p-4 flex-1 flex items-center justify-center">
+                                <h3 className="text-white font-bold text-lg text-center">{card.title}</h3>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Back of card */}
+                          <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-lg overflow-hidden border border-express-purple/60">
+                            <div className="h-full flex flex-col bg-black/20">
+                              <div className="p-4 flex-1 flex items-center justify-center">
+                                <p className="text-white text-center">{card.description}</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
@@ -169,7 +171,7 @@ const About: React.FC = () => {
                 </CardContent>
               </div>
             </Card>
-            
+
             <Card className="overflow-hidden border-none bg-transparent backdrop-blur-sm border border-express-purple/30">
               <div className="md:flex">
                 <CardContent className="w-full p-6">
@@ -194,7 +196,7 @@ const About: React.FC = () => {
               </div>
             </Card>
           </div>
-          
+
           <div className="mt-12 text-center">
           </div>
         </div>
