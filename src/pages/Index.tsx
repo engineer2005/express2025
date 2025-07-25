@@ -4,10 +4,23 @@ import ParticleBackground from "../components/ParticleBackground";
 import Logo from "../components/Logo";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import Footer from "../components/Footer";
+import Modal from "../components/Modal";
 
 
 const Index: React.FC = () => {
+  // for the modal functionality
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const navEntries = performance.getEntriesByType('navigation');
+    const isReload =
+      navEntries.length > 0 && navEntries[0].type === 'reload';
+
+    if (isReload) {
+      setShowModal(true);
+    }
+  }, []);
+
   const [api, setApi] = useState<any>();
   const autoplayRef = useRef<NodeJS.Timeout>();
 
@@ -27,8 +40,8 @@ const Index: React.FC = () => {
       // 2. Trigger the zoom-out effect after the animation has been shown for a duration
       zoomOutTimeoutRef.current = setTimeout(() => {
         setIsZoomed(false); // Start the zoom-out animation
-        }, 1000); // Display the zoomed content for 5 seconds (5000 milliseconds)
-      }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
+      }, 1000); // Display the zoomed content for 5 seconds (5000 milliseconds)
+    }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
 
     // Clean up any pending timeouts if the component goes away early
     return () => {
@@ -88,7 +101,7 @@ const Index: React.FC = () => {
           {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
           <div className="text-group">
             <span className="logo-text">DJS eXpress</span>
-            <p className="small-subtext " style={{fontStyle: "italic"}}>
+            <p className="small-subtext " style={{ fontStyle: "italic" }}>
               #eXpressToInspire {/* <--- REPLACE THIS WITH YOUR TEXT */}
             </p>
             <p className="small-subtext">
@@ -104,7 +117,7 @@ const Index: React.FC = () => {
           className={`zoomed-content-wrapper ${isZoomed ? "is-active" : ""}`}
         >
           <img
-            src="sherlock.jpeg" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
+            src="expressReload.png" // <--- IMPORTANT: REPLACE with the actual path to YOUR image file (e.g., /images/my-reveal-image.jpg)
             alt="Image appearing from text"
             className="zoomed-image"
           />
@@ -123,9 +136,8 @@ const Index: React.FC = () => {
           {/* Your other page content */}
         </div>
 
-        <div className="fixed bottom-0 left-0 w-full z-50">
-          <Footer />
-        </div>
+        {/*{showModal && <Modal onClose={() => setShowModal(false)} />}*/}
+
       </div>
     </>
   );

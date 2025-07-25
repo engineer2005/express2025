@@ -27,6 +27,7 @@ export default {
 				'express-purple': '#ab65fa',
 				'custom-white': '#ffffff',
 				'express-purple-glow': '#aa65fafe',
+				'express-modal':'#8c60befe',
 				foreground: 'hsl(var(--foreground))',
 				sherlock: {
 					gold: 'hsl(var(--sherlock-gold))',
