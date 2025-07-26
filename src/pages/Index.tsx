@@ -37,16 +37,21 @@ const Index: React.FC = () => {
   useEffect(() => {
     document.title = "eXpress - Public Speaking and Debating Committee";
 
-    // --- NEW: Timing for the zoom animation ---
-    // 1. Trigger the zoom-in effect after a short delay
-    initialAnimationTimeoutRef.current = setTimeout(() => {
-      setIsZoomed(true); // Start the zoom-in animation
+    // Only enable zoom animation on desktop (768px and above)
+    const isDesktop = window.innerWidth >= 768;
+    
+    if (isDesktop) {
+      // --- NEW: Timing for the zoom animation ---
+      // 1. Trigger the zoom-in effect after a short delay
+      initialAnimationTimeoutRef.current = setTimeout(() => {
+        setIsZoomed(true); // Start the zoom-in animation
 
-      // 2. Trigger the zoom-out effect after the animation has been shown for a duration
-      zoomOutTimeoutRef.current = setTimeout(() => {
-        setIsZoomed(false); // Start the zoom-out animation
-        }, 5000); // Display the zoomed content for 5 seconds (5000 milliseconds)
-      }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
+        // 2. Trigger the zoom-out effect after the animation has been shown for a duration
+        zoomOutTimeoutRef.current = setTimeout(() => {
+          setIsZoomed(false); // Start the zoom-out animation
+          }, 5000); // Display the zoomed content for 5 seconds (5000 milliseconds)
+        }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
+    }
 
     // Clean up any pending timeouts if the component goes away early
     return () => {
