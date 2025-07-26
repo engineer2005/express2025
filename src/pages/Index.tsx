@@ -12,10 +12,15 @@ const Index: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
+    let isReload = false;
+    // Try the modern API first
     const navEntries = performance.getEntriesByType('navigation');
-    const isReload =
-      navEntries.length > 0 && navEntries[0].type === 'reload';
-
+    if (navEntries.length > 0 && 'type' in navEntries[0]) {
+      isReload = navEntries[0].type === 'reload';
+    } else if ('navigation' in performance && performance.navigation) {
+      // Fallback for older browsers
+      isReload = performance.navigation.type === 1; // 1 means reload
+    }
     if (isReload) {
       setShowModal(true);
     }
