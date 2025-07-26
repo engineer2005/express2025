@@ -40,8 +40,8 @@ const Index: React.FC = () => {
       // 2. Trigger the zoom-out effect after the animation has been shown for a duration
       zoomOutTimeoutRef.current = setTimeout(() => {
         setIsZoomed(false); // Start the zoom-out animation
-      }, 1000); // Display the zoomed content for 5 seconds (5000 milliseconds)
-    }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
+        }, 5000); // Display the zoomed content for 5 seconds (5000 milliseconds)
+      }, 500); // Start animation 0.5 seconds after page loads (500 milliseconds)
 
     // Clean up any pending timeouts if the component goes away early
     return () => {
