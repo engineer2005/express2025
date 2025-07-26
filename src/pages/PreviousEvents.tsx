@@ -22,7 +22,7 @@ import c3 from '../images/court/c3.jpg';
 import t1 from '../images/tick/t1.jpg';
 import t2 from '../images/tick/t2.jpg';
 import t3 from '../images/tick/t3.jpg';
-import arya2 from '../images/aryavarta2/arya2.jpg';
+import arya2 from '../images/aryavarta2/ARYA2.jpg';
 import x1 from '../images/xcon/x1.jpeg';
 import x2 from '../images/xcon/x2.jpeg';
 import x3 from '../images/xcon/x3.jpeg';
