@@ -91,7 +91,7 @@ const Index: React.FC = () => {
 
       {/* Main content container - now applies blur when zoomed */}
       <div
-        className={`relative min-h-screen flex flex-col items-center justify-center z-10 px-6 pt-20 `}
+        className={`relative min-h-screen flex flex-col items-center justify-center z-10 px-4 sm:px-6 pt-16 sm:pt-20 `}
       >
         {/* Your original logo and text container - now applies zoom/fade to text */}
         <div
@@ -130,8 +130,8 @@ const Index: React.FC = () => {
           {/* <p className="zoomed-text">Welcome to DJS eXpress!</p> */}
         </div>
         {/* Call to Action */}
-        <div className="mt-4">
-          <Link to="/upcoming-events" className="sherlock-button group">
+        <div className="mt-4 sm:mt-6">
+          <Link to="/upcoming-events" className="sherlock-button group text-xs sm:text-sm">
             <span className="font-semibold tracking-wider">Know More</span>
             <ChevronRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
           </Link>

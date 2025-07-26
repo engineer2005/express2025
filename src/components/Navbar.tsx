@@ -66,32 +66,38 @@ const Navbar: React.FC = () => {
       <div className="md:hidden h-0">
         {/* Sticky hamburger button */}
         <button 
-          className="fixed top-4 right-4 bg-express-dark/80 backdrop-blur rounded-full p-2 z-50 text-white"
+          className="fixed top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full p-3 z-50 text-foreground border border-border shadow-lg"
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
         {/* Mobile menu overlay */}
         <div 
-          className={`fixed inset-0 bg-express-dark/95 flex flex-col items-center justify-center space-y-8 z-40 transition-transform duration-300 ease-in-out transform ${
-            isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          className={`fixed inset-0 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center space-y-6 z-40 transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
           }`}
         >
           <Logo size="medium" showText={true} />
-          {navLinks.map((link) => (
-            <NavLink 
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) => 
-                `nav-link text-lg ${isActive ? 'text-express-purple' : 'text-white'}`
-              }
-              onClick={closeMenu}
-            >
-              {link.title}
-            </NavLink>
-          ))}
+          <div className="flex flex-col items-center space-y-4 mt-8">
+            {navLinks.map((link) => (
+              <NavLink 
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) => 
+                  `nav-link text-lg px-6 py-2 rounded-lg transition-all duration-200 ${
+                    isActive 
+                      ? 'text-primary bg-primary/10 border border-primary/20' 
+                      : 'text-foreground hover:bg-muted/50'
+                  }`
+                }
+                onClick={closeMenu}
+              >
+                {link.title}
+              </NavLink>
+            ))}
+          </div>
         </div>
       </div>
     </>
