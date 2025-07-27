@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 import { ChevronRight, BookOpen, ExternalLink } from 'lucide-react';
 
@@ -16,6 +16,7 @@ const Expresso: React.FC = () => {
   }, []);
 
   const [selectedEdition, setSelectedEdition] = useState<Edition | null>(null);
+  const previewRef = useRef<HTMLDivElement>(null);
 
   const editions: Edition[] = [
     {
@@ -102,7 +103,15 @@ const Expresso: React.FC = () => {
                   
                   <div className="flex gap-4 justify-center">
                     <button 
-                      onClick={() => setSelectedEdition(edition)}
+                      onClick={() => {
+                        setSelectedEdition(edition);
+                        setTimeout(() => {
+                          previewRef.current?.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                          });
+                        }, 100);
+                      }}
                       className="sherlock-button group p-3 rounded-full"
                       title="Preview Edition"
                     >
@@ -123,7 +132,7 @@ const Expresso: React.FC = () => {
           </div>
           
           {selectedEdition && (
-            <div className="w-full">
+            <div ref={previewRef} className="w-full">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-express-purple">
                   Previewing: {selectedEdition.title}
