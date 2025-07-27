@@ -103,11 +103,7 @@ const Index: React.FC = () => {
           className={`logo-and-text-container ${isZoomed ? "logo-zoomed-out" : ""
             }`}
         >
-          <img
-            src="/lovable-uploads/e3a10d0d-4f1e-49a1-8b38-b48a1cefb127.png"
-            alt="DJS eXpress"
-            className="logo-image"
-          />
+          <Logo size="large" showText={false} />
           {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
           <div className="text-group">
             <span className="logo-text">DJS eXpress</span>
