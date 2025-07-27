@@ -23,11 +23,16 @@ import t1 from '../images/tick/t1.jpg';
 import t2 from '../images/tick/t2.jpg';
 import t3 from '../images/tick/t3.jpg';
 import arya2 from '../images/aryavarta2/ARYA2.jpg';
-import x1 from '../images/xcon/x1.jpeg';
-import x2 from '../images/xcon/x2.jpeg';
-import x3 from '../images/xcon/x3.jpeg';
+import x1 from '../images/xcon/x1c.jpeg';
+import x2 from '../images/xcon/x2c.jpeg';
+import x3 from '../images/xcon/x3c.jpeg';
 import pl1 from '../images/plot/p1.png';
 import pl2 from '../images/plot/p2.png';
+import aa1 from '../images/aryavarta2/a1.png';
+import aa2 from '../images/aryavarta2/a2.png';
+import ary1 from '../images/a1.0/a1.png';
+import ary2 from '../images/a1.0/a2.png';
+import ary3 from '../images/a1.0/a3.png';
 
 interface EventImage {
   src: string;
@@ -113,18 +118,18 @@ const PreviousEvents: React.FC = () => {
       title: "Aryavarta 2.0",
       description: "Aryavarta 2.0 celebrated the vibrant spirit of Indian Culture. This captivating interdepartmental event consisted of two exhilarating days filled with knowledge, camaraderie, and excitement, deepening one's appreciation for our glorious past. Participants engaged in thrilling quizzes and lively debates promoting India's rich heritage and legacy.",
       images: [
-        { src: a2, alt: "Aryavarta 2.0 - 1" },
-        { src: p2, alt: "Aryavarta 2.0 - 2" },
-        { src: i1, alt: "Aryavarta 2.0 - 3" }
+        { src: aa1, alt: "Aryavarta 2.0 - 1" },
+        { src: aa2, alt: "Aryavarta 2.0 - 2" },
+        { src: arya2, alt: "Aryavarta 2.0 - 3" }
       ]
     },
     {
       title: "Aryavarta 1.0",
       description: "This fun competition between different college departments brought everyone together to celebrate India's incredible heritage. Students put their knowledge to the test in a challenging quiz and a lively debate about important Indian topics. It was an exciting event that sparked a love for learning about India's rich history and traditions, leaving everyone feeling proud and connected to their roots.",
       images: [
-        { src: a2, alt: "Aryavarta 1.0 - 1" },
-        { src: arya2, alt: "Aryavarta 1.0 - 2" },
-        { src: i2, alt: "Aryavarta 1.0 - 3" }
+        { src: ary1, alt: "Aryavarta 1.0 - 1" },
+        { src: ary2, alt: "Aryavarta 1.0 - 2" },
+        { src: ary3, alt: "Aryavarta 1.0 - 3" }
       ]
     }
   ];
