@@ -25,7 +25,12 @@ const Logo: React.FC<LogoProps> = ({
   };
   return <Link to="/" className="flex flex-col items-center no-underline">
       <div className={`${showText ? 'animate-float' : ''}`}>
-        
+        <img 
+          src={logo} 
+          alt="eXpress Logo" 
+          style={{ width: sizes[size].logo, height: sizes[size].logo }}
+          className="object-contain"
+        />
       </div>
       {showText && <>
           <h1 className={`md:text-sherlock-gold text-primary font-bold tracking-wider ${sizes[size].text} -mt-15 text-shadow-lg drop-shadow-2xl`}>
