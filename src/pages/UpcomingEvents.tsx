@@ -93,7 +93,7 @@ const UpcomingEvents: React.FC = () => {
                         className="mr-2 text-express-purple"
                         size={18}
                       />
-                      <span>11th April 2025</span>
+                      <span>13th & 14th August 2025</span>
                     </div>
                     <div className="flex items-center">
                       <Clock className="mr-2 text-express-purple" size={18} />
