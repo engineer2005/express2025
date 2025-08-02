@@ -21,43 +21,43 @@ const Expresso: React.FC = () => {
   const editions: Edition[] = [
     {
       number: 1,
-      title: "First Edition",
+      title: "Volume 1",
       url: "https://drive.google.com/file/d/1P-3Pp2KMMoCAtD9yBggTAuDKxx6ovpop/view?usp=sharing",
       description: "What If We Played with Color? \n From thought experiments to Holi hues — explore the Vile Parle theme page and more."
     },
     {
       number: 2,
-      title: "Second Edition",
+      title: "Volume 2",
       url: "https://drive.google.com/file/d/1U1IZt1Tb2HXHgOJFXKP6cYEH-16oLGDA/view?usp=sharing",
       description: "Wings, Wins, and What’s Next ?  Air India’s last 747 takes a bow, and we dive into games that keep us flying high."
     },
     {
       number: 3,
-      title: "Third Edition",
+      title: "Volume 3",
       url: "https://drive.google.com/file/d/1CKbazjDtGC3EAKfjvkSGxIlto0-MK46Y/view?usp=sharing",
       description: "Stories of Our Time..Where literature meets the headlines — reflecting the world through words."
     },
     {
       number: 4,
-      title: "March Edition",
+      title: "Volume 4",
       url: "https://drive.google.com/file/d/1LkocHCdiRoL-__fLOfEp0Xrtiqsy1TgT/view?usp=sharing",
       description: "Fresh perspectives and creative insights from our latest issue."
     },
     {
       number: 5,
-      title: "April Edition",
+      title: "Volume 5",
       url: "https://drive.google.com/file/d/1htG7co4aO1glDJXAzVVmaZYsntWBE5Kn/view?usp=sharing",
       description: "Discover new voices and stories in our April collection."
     },
     {
       number: 6,
-      title: "May Edition",
+      title: "Volume 6",
       url: "https://drive.google.com/file/d/1oT-qI5Ax_mUi0p7XPhjlFRNwwX241Dpi/view?usp=sharing",
       description: "Our comprehensive May edition featuring the best content."
     },
     {
       number: 7,
-      title: "June Edition",
+      title: "Volume:-7",
       url: "https://drive.google.com/file/d/16UeiAT9rFDROwK7skPAuENPBRv-2TRZ_/view?usp=drivesdk",
       description: "Fresh insights and stories from our June collection."
     }

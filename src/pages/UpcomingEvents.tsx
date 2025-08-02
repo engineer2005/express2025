@@ -124,14 +124,14 @@ const UpcomingEvents: React.FC = () => {
                   <div className="bg-express-purple/20 rounded-lg p-4 mb-6">
                     <h3 className="text-xl font-bold text-white mb-3 flex items-center">
                       <Award className="mr-2" size={22} />
-                      Prizes
+                      Prize Pool
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div className="bg-black/30 p-4 rounded-lg text-center">
                         {/*<span className="text-lg font-bold text-express-light">
                           1st Place
                         </span>*/}
-                        <p className="text-white font-bold text-2xl">₹50,000</p>
+                        <p className="text-white font-bold text-2xl">₹1,00,000</p>
                       </div>
                       {/*<div className="bg-black/30 p-4 rounded-lg text-center">
                         <span className="text-lg font-bold text-express-light">
