@@ -23,7 +23,7 @@ const UpcomingEvents: React.FC = () => {
 
   const handleRegister = () => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSex0PAOw7S13GpJX4onbBJz2lT0jnJsjDR6jP2_NsFTj9ST8g/viewform",
+      "https://veritas-event.vercel.app/",
       "_blank"
     );
   };

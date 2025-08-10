@@ -49,16 +49,11 @@
 
 .logo-text {
   font-size: clamp(3em, 8vw, 6.2em);
-  color: #8e69b5;
+  color: #883ed7;
   background-color: transparent;
   font-weight: bold;
+  font-style: serif;
   white-space: normal;
-
-  /* --- THICKER PURPLE TEXT BORDER/OUTLINE EFFECT --- */
-  text-shadow: -2px -2px 0px #ffffff,
-    /* Increased to 2px */ 2px -2px 0px #ab65fa,
-    /* Increased to 2px */ -2px 2px 0px #ab65fa,
-    /* Increased to 2px */ 2px 2px 0px #ab65fa; /* Increased to 2px */
 
   /* --- IMPORTANT: Adjust this transition for the "zoom in" effect --- */
   /* Make the transform animation slightly faster than the container's fade */

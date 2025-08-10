@@ -106,7 +106,7 @@ const Index: React.FC = () => {
           <Logo size="medium" showText={false} />
           {/* --- NEW: Container for 'DJS eXpress' and the new small text --- */}
           <div className="text-group">
-            <span className="logo-text">DJS eXpress</span>
+            <span className="logo-text text-express-purple/60 font-serif">DJS eXpress</span>
             <p className="small-subtext " style={{ fontStyle: "italic" }}>
               #eXpressToInspire {/* <--- REPLACE THIS WITH YOUR TEXT */}
             </p>
