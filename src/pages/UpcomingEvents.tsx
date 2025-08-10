@@ -23,7 +23,7 @@ const UpcomingEvents: React.FC = () => {
 
   const handleRegister = () => {
     window.open(
-      "https://veritas-event.vercel.app/",
+      "https://docs.google.com/forms/d/e/1FAIpQLSex0PAOw7S13GpJX4onbBJz2lT0jnJsjDR6jP2_NsFTj9ST8g/viewform",
       "_blank"
     );
   };
@@ -74,7 +74,7 @@ const UpcomingEvents: React.FC = () => {
                 <div className="md:w-2/3">
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                     <a className="text-3xl font-semibold text-white font-playfair"
-                      href="https://drive.google.com/file/d/1KsJkJ8DgYLYeqNNlOlTuMsWLMLmTjbKw/view?usp=sharing"
+                      href="https://veritas-event.vercel.app/"
                       target="_blank"
                       aria-label="Veritas: A Scandal of Expression"
                     >
