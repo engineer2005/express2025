@@ -33,6 +33,11 @@ import aa2 from '../images/aryavarta2/a2.png';
 import ary1 from '../images/a1.0/a1.png';
 import ary2 from '../images/a1.0/a2.png';
 import ary3 from '../images/a1.0/a3.png';
+import v1 from '../images/veritas/v1.jpg';
+import v2 from '../images/veritas/v2.jpg';
+import v3 from '../images/veritas/v3.jpg';  
+import v4 from '../images/veritas/v4.jpg';
+import v5 from '../images/veritas/v5.jpg';
 
 interface EventImage {
   src: string;
@@ -51,6 +56,17 @@ const PreviousEvents: React.FC = () => {
   }, []);
 
   const events: Event[] = [
+    {
+      title: "Veritas",
+      description: "This thrilling Sherlock-inspired competition brought together teams of two from different departments for an evening of wit, drama, and mystery. From fast-paced debates to clever deduction games, students stepped into the shoes of master detectives, showcasing their sharp thinking and performance skills. The event was filled with excitement and creativity, leaving everyone entertained and inspired to embrace the art of reasoning and storytelling.",
+      images: [
+        { src: v5, alt: "Veritas - 5" },
+        { src: v2, alt: "Veritas - 2" },
+        { src: v3, alt: "Veritas - 3" },
+        { src: v4, alt: "Veritas - 4" },
+        { src: v1, alt: "Veritas - 1" }
+      ]
+    },
     {
       title: "The Pilot: Episode 1",
       description: "The Pilot: Episode One was DJS eXpress' inter-college event that brought the world of sitcoms to life on campus. With meme battles, heated debates, quirky monologues, and hilarious parodies, participants showcased their wit, creativity, and spontaneity across four thrilling rounds. The event was packed with laughter, iconic pop culture moments, and electrifying performances — all making for an unforgettable experience that truly set the stage for what DJS eXpress stands for.",
@@ -131,7 +147,7 @@ const PreviousEvents: React.FC = () => {
         { src: ary2, alt: "Aryavarta 1.0 - 2" },
         { src: ary3, alt: "Aryavarta 1.0 - 3" }
       ]
-    }
+    },
   ];
 
   const EventCarousel: React.FC<{ images: EventImage[]; eventTitle: string }> = ({ images, eventTitle }) => {

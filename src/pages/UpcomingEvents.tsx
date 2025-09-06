@@ -171,7 +171,8 @@ const UpcomingEvents: React.FC = () => {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       onClick={handleRegister}
-                      className="bg-express-purple text-white hover:bg-express-purple/90 transition-colors group"
+                      className="bg-express-purple text-white hover:bg-express-purple/90 transition-colors group disabled:cursor-not-allowed"
+                      disabled={true}
                     >
                       <span>REGISTER HERE</span>
                       <ExternalLink size={16} />
