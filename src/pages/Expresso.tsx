@@ -64,7 +64,7 @@ const Expresso: React.FC = () => {
     {
       number: 8,
       title: "Volume:-8",
-      url: "https://drive.google.com/file/d/1yl7y7yK-uP2SwsfA-MzRK6ob0Gl2PH3b/view?usp=sharing",
+      url: "https://drive.google.com/file/d/10Vy1LrzfvTZB4Q10YxzpiFTOe9NcP-iS/view?usp=sharing",
       description: "Explore new narratives and ideas in our September issue."
     }
   ];
