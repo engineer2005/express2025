@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Certificates.css";
 import ParticleBackground from "../components/ParticleBackground";
+import certificateImage from "../images/certificate.png"; // ✅ added import
 
 type VerificationResult =
   | {
@@ -104,10 +105,12 @@ const Certificates: React.FC = () => {
             </button>
           </form>
 
+          {/* ❌ Show error if any */}
           {result?.type === "error" && (
             <div className="error-message">{result.data}</div>
           )}
 
+          {/* ✅ Show actual certificate once verified */}
           {result?.type === "html" && (
             <div className="certificate-view">
               <iframe

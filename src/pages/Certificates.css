@@ -288,3 +288,21 @@
     height: 350px;
   }
 }
+
+.certificate-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.certificate-sample {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview-text {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 8px;
+}
