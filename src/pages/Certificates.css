@@ -139,7 +139,7 @@
 }
 
 .submit-btn:active {
-  margin-top: 10vh;
+  transform: translateY(1px);
 }
 
 /* Spinner */
@@ -194,8 +194,82 @@
 }
 
 .certificate-card.certificate-generated {
-  margin-top: 10vh;
-  transition: margin-top 0.4s ease;
+  /* Remove forced margin when certificate is generated since we'll open overlay/modal */
+  margin-top: 0;
+  transition: none;
+}
+
+/* Overlay modal styles for certificate display */
+.certificate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.certificate-modal {
+  width: min(1100px, 95vw);
+  max-height: 90vh;
+  background: rgba(18, 5, 41, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.certificate-modal-header .modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.modal-close {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.25rem 0.6rem;
+}
+
+.download-btn {
+  background: #a78bfa;
+  color: #12052b;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(167, 139, 250, 0.22);
+}
+
+.certificate-modal-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  border: none;
+  display: block;
+  flex: 1;
+  overflow: hidden;
 }
 
 /* ------------------- RESPONSIVENESS ------------------- */
