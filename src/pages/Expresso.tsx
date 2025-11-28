@@ -66,6 +66,12 @@ const Expresso: React.FC = () => {
       title: "Volume:-8",
       url: "https://drive.google.com/file/d/10Vy1LrzfvTZB4Q10YxzpiFTOe9NcP-iS/view?usp=sharing",
       description: "Explore new narratives and ideas in our September issue."
+    },
+    {
+      number: 9,
+      title: "Volume:-9",
+      url: "https://drive.google.com/file/d/1ND1Qh5ft09XVUKmcVZ84rdCwSEdjwnmO/view?usp=sharing",
+      description: "Explore new narratives and ideas in our September issue."
     }
   ];
 
