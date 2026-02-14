@@ -10,20 +10,20 @@ const Contact: React.FC = () => {
   const contacts = [
     {
       role: "Chairperson",
-      name: "Aniket Prasad",
-      phone: "+91 96533 44645",
+      name: "Dhruv Thakur",
+      phone: "+91 90763 17135",
       icon: User
     },
     {
       role: "Vice Chairperson",
-      name: "Kevin Savla",
-      phone: "+91 70212 88189",
+      name: "Sakshi Gandhi",
+      phone: "+91 86550 75744",
       icon: User
     },
     {
       role: "Vice Chairperson",
-      name: "Kriish Chheda",
-      phone: "+91 91671 60832",
+      name: "Vidit Thakkar",
+      phone: "+91 89764 61392",
       icon: User
     }
   ];

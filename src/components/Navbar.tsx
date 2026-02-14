@@ -27,13 +27,13 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { title: "Home", path: "/" },
-    { title: "Upcoming Events", path: "/upcoming-events" },
-    { title: "eXpresso", path: "/expresso" },
-    { title: "Previous Events", path: "/previous-events" },
-    { title: "Team", path: "/team" },
     { title: "About", path: "/about" },
-    { title: "Contact Us", path: "/contact" },
+    //{ title: "Upcoming Events", path: "/upcoming-events" },
+    { title: "Previous Events", path: "/previous-events" },
+    { title: "eXpresso", path: "/expresso" },
+    { title: "Team", path: "/team" },
     { title: "Certificates", path: "/certificates" },
+    { title: "Contact Us", path: "/contact" },
   ];
 
   return (
