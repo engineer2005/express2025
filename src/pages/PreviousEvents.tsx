@@ -203,7 +203,7 @@ const PreviousEvents: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           {/* Page Title */}
           <div className="text-center mb-20">
-            <h1 className="text-6xl font-bold text-express-purple mb-6">
+            <h1 className="text-4xl md:text-7xl font-bold text-express-purple mb-6 font-playfair">
               Previous Events
             </h1>
             <p className="text-muted-foreground text-xl max-w-3xl mx-auto">

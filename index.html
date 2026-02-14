@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>express - Public Speaking and Debating Committee</title>
+    <link rel="icon" type="image/png" href="/logo.png?v=2" />
     <meta name="description" content="express is a public speaking and debating committee dedicated to improving communication skills through workshops, events and competitions." />
     <meta name="author" content="express" />
 
@@ -23,5 +24,20 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // This script forces your logo to override the Lovable heart
+      function changeFavicon(src) {
+        let link = document.querySelector("link[rel*='icon']");
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.getElementsByTagName('head')[0].appendChild(link);
+        }
+        link.href = src;
+      }
+      // Run it immediately and again after the Lovable script loads
+      changeFavicon('/images/logo.png');
+      setTimeout(() => changeFavicon('/images/logo.png'), 1000);
+    </script>
   </body>
 </html>

@@ -12,10 +12,11 @@ import c2 from '../images/c2.jpg'
 import s1 from '../images/s1.jpg'
 import m1 from '../images/m1.jpg'
 import m2 from '../images/m2.jpg'
-import e1 from '../images/e1.jpg'
+import arm from '../images/arm.jpg'
+import hb from '../images/hb.jpg'
 import e2 from '../images/e2.jpg'
 import j1 from '../images/j1.jpg'
-import o1 from '../images/o1 (1).jpg'
+import o1 from '../images/o1.jpg'
 import o2 from '../images/o2.jpg'
 import cp from '../images/cp.jpg'
 import vcp2 from '../images/vcp2.jpg'
@@ -23,8 +24,11 @@ import ev1 from '../images/ev1.jpg'
 import t from '../images/t.jpg'
 import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
+import mam from '../images/mam.jpeg'
+import place from '../images/place.jpg'
 
 import teacher from '../images/teacher.jpg' 
+import { ZAxis } from 'recharts';
 
 const Team: React.FC = () => {
   useEffect(() => {
@@ -47,19 +51,19 @@ const Team: React.FC = () => {
 
   // Core team
   const chairperson = {
-    name: "Aniket Prasad",
+    name: "Dhruv Thakur",
     role: "Chairperson",
     image: cp, 
   };
   
   const viceChairpersons = [
     {
-      name: "Kevin Savla",
+      name: "Sakshi Gandhi",
       role: "Vice Chairperson",
-      image: vcp, 
+      image: place, 
     },
     {
-      name: "Kriish Chheda",
+      name: "Vidit Thakkar",
       role: "Vice Chairperson",
       image: vcp2, 
     }
@@ -70,76 +74,85 @@ const Team: React.FC = () => {
     {
       name: "Treasurer",
       members: [
-        { name: "Devanshi Shah", role: "Treasurer", image: t } 
+        { name: "Priyansh Dedhia", role: "Treasurer", image: t } 
       ]
     },
     {
       name: "Secretaries",
       members: [
-        { name: "Neeraja Shah", role: "Secretary", image: s2 }, 
-        { name: "Harshil Raval", role: "Secretary", image: s1 } 
-      ]
-    },
-    {
-      name: "Events",
-      members: [
-        { name: "Ananya Patel", role: "Events Head", image: e2 }, 
-        { name: "Rushabh Shah", role: "Events Head", image: ev1 } 
-      ]
-    },
-    {
-      name: "Publicity",
-      members: [
-        { name: "Harshil Bhanushali", role: "Publicity Head", image: p1 },
-        { name: "Chhavi Rathod", role: "Publicity Head", image: p2 }
-      ]
-    },
-    {
-      name: "Creatives",
-      members: [
-        { name: "Disha Shetty", role: "Creatives Head", image: c2 }, 
-        { name: "Shalmalee Thakur", role: "Creatives Head", image: c1 } 
-      ]
-    },
-    {
-      name: "Operations",
-      members: [
-        { name: "Anmol Santwani", role: "Operations Head", image: o2 },
-        { name: "Dhruv Singhania", role: "Operations Head", image: o1 }
+        { name: "Anuja Dubbewar", role: "Secretary", image: s1 }, 
+        { name: "Rudra Bhandari", role: "Secretary", image: s2 } 
       ]
     },
     {
       name: "Marketing",
       members: [
-        { name: "Dhairya Dharod", role: "Marketing Head", image: m1 },
-        { name: "Atharva Kismatrao", role: "Marketing Head", image: m2 }
-      ]
-    },
-    {
-      name: "Journalism",
-      members: [
-        { name: "Ibrahim Kothari", role: "Journalism Head", image: j2 },
-        { name: "Jash Sheth", role: "Journalism Head", image: j1 }
-      ]
-    },
-    {
-      name: "Editorial",
-      members: [
-        { name: "Hardik lyer", role: "Editorial Head", image: e1 }
+        { name: "Vedant Dighe", role: "Marketing Head", image: place },
+        { name: "Mohit Kankaria", role: "Marketing Head", image: m2 }
       ]
     },
     {
       name: "Technical",
       members: [
-        { name: "Pearl Mody", role: "Technical Head", image: pm }
+        { name: "Lavish Jain", role: "Technical Head", image: place },
+        { name: "Kyra Karkaria", role: "Technical Head", image: pm }
+      ]
+    },
+    {
+      name: "Public Relations",
+      members: [
+        { name: "Nandish Vyas ", role: "PR Head", image: place },
+        { name: "Lavisha Boliya", role: "PR Head", image: place }
       ]
     },
     {
       name: "Production",
       members: [
-        { name: "Krishna Naudiyal", role: "Production Head", image: p }
+        { name: "Maanvi Gupta", role: "Production Head", image: p },
+        { name: "Mohammed Ali Memon", role: "Production Head", image: mam }
       ]
-    }
+    },
+    {
+      name: "Creatives",
+      members: [
+        { name: "Sahana Nayak", role: "Creatives Head", image: place }, 
+        { name: "Arushi Kumar", role: "Creatives Head", image: place } 
+      ]
+    },
+    {
+      name: "Logistics",
+      members: [
+        { name: "Raj Sawant", role: "Logistics Head", image: place },
+        { name: "Mulraj Gala", role: "Logistics Head", image: o1 }
+      ]
+    },
+    {
+      name: "Events",
+      members: [
+        { name: "Anushka Dwivedi", role: "Events Head", image: place }, 
+        { name: "Junisha Walecha", role: "Events Head", image: ev1 } 
+      ]
+    },
+    {
+      name: "Journalism",
+      members: [
+        { name: "Panini Shah", role: "Journalism Head", image: j2 },
+        { name: "Suhani Gupta", role: "Journalism Head", image: j1 }
+      ]
+    },
+    {
+      name: "Editorial",
+      members: [
+        { name: "Heer Bhadra", role: "Editorial Head", image: hb}
+      ]
+    },
+    {
+      name: "Outreach",
+      members: [
+        { name: "Aryan Maurya", role: "Outreach Head", image: arm }
+      ]
+    },
+    
   ];
 
   // Faculty card component - INCREASED SIZE
@@ -159,7 +172,7 @@ const Team: React.FC = () => {
       <div className="w-44 h-44 rounded-full overflow-hidden mb-5 border-3 border-express-purple/50 group-hover:border-express-purple transition-all">
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
-      <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
+      <h3 className="text-xl font-playfair font-semibold text-white">{member.name==="Mohit Kankaria"&&(<span style={{color:'#000',userSelect:'all'}}>❤︎</span>)}{member.name}{member.name==="Mohit Kankaria"&&(<span style={{color:'#000',userSelect:'all'}}>❤︎</span>)}</h3>
       <p className="text-custom-white  mt-1 font-bold">{member.role}</p>
     </div>
   );
