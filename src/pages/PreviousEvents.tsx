@@ -38,6 +38,9 @@ import v2 from '../images/veritas/v2.jpg';
 import v3 from '../images/veritas/v3.jpg';  
 import v4 from '../images/veritas/v4.jpg';
 import v5 from '../images/veritas/v5.jpg';
+import a41 from '../images/Aryavarta 4/a1.heif';
+import a42 from '../images/Aryavarta 4/a2.heif';
+import a43 from '../images/Aryavarta 4/a3.png';
 
 interface EventImage {
   src: string;
@@ -60,9 +63,9 @@ const PreviousEvents: React.FC = () => {
       title: "Aryavarta 4.0",
       description: "Aryavarta 4.0 took participants on a thrilling journey through the era of Ancient Dynasties. This year’s edition transformed our campus into a battleground of ideas, as departments competed in intense quizzes and electrifying debates inspired by the great empires of the past. From the brilliance of the Maurya Empire to the grandeur of the Gupta Empire and the valor of the Chola dynasty. Aryavarta 4.0 wasn’t just an event—it was an immersive celebration of ambition, intellect, and the timeless legacy of India’s ancient thrones.",
       images: [
-        { src: a1, alt: "Aryavarta 3.0 - 1" },
-        { src: a2, alt: "Aryavarta 3.0 - 2" },
-        { src: a3, alt: "Aryavarta 3.0 - 3" }
+        { src: a41, alt: "Aryavarta 4.0 - 1" },
+        { src: a42, alt: "Aryavarta 4.0 - 2" },
+        { src: a43, alt: "Aryavarta 4.0 - 3" }
       ]
     },
     {
