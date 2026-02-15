@@ -57,6 +57,15 @@ const PreviousEvents: React.FC = () => {
 
   const events: Event[] = [
     {
+      title: "Aryavarta 4.0",
+      description: "Aryavarta 4.0 took participants on a thrilling journey through the era of Ancient Dynasties. This year’s edition transformed our campus into a battleground of ideas, as departments competed in intense quizzes and electrifying debates inspired by the great empires of the past. From the brilliance of the Maurya Empire to the grandeur of the Gupta Empire and the valor of the Chola dynasty. Aryavarta 4.0 wasn’t just an event—it was an immersive celebration of ambition, intellect, and the timeless legacy of India’s ancient thrones.",
+      images: [
+        { src: a1, alt: "Aryavarta 3.0 - 1" },
+        { src: a2, alt: "Aryavarta 3.0 - 2" },
+        { src: a3, alt: "Aryavarta 3.0 - 3" }
+      ]
+    },
+    {
       title: "Veritas",
       description: "This thrilling Sherlock-inspired competition brought together teams of two from different departments for an evening of wit, drama, and mystery. From fast-paced debates to clever deduction games, students stepped into the shoes of master detectives, showcasing their sharp thinking and performance skills. The event was filled with excitement and creativity, leaving everyone entertained and inspired to embrace the art of reasoning and storytelling.",
       images: [
