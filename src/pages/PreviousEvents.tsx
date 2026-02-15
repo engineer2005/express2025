@@ -38,9 +38,9 @@ import v2 from '../images/veritas/v2.jpg';
 import v3 from '../images/veritas/v3.jpg';  
 import v4 from '../images/veritas/v4.jpg';
 import v5 from '../images/veritas/v5.jpg';
-import a41 from '../images/Aryavarta 4/a1.heif';
-import a42 from '../images/Aryavarta 4/a2.heif';
-import a43 from '../images/Aryavarta 4/a3.png';
+import a41 from '../images/Aryavarta 4/a1.jpg';
+import a42 from '../images/Aryavarta 4/a2.jpg';
+import a43 from '../images/Aryavarta 4/a3.jpg';
 
 interface EventImage {
   src: string;
