@@ -1,7 +1,8 @@
-
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Instagram, Linkedin, Heart, Youtube } from 'lucide-react';
+// Import the brand logos from Simple Icons
+import { SiMedium, SiSubstack } from 'react-icons/si'; 
 
 const Footer: React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,29 @@ const Footer: React.FC = () => {
             >
               <Instagram size={20} />
             </a>
+
+            {/* Official Medium Logo */}
+            <a 
+              href="https://medium.com/@djsexpresso"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
+              aria-label="Medium"
+            >
+              <SiMedium size={18} /> {/* SiMedium usually looks better slightly smaller than Lucide icons */}
+            </a>
+
+            {/* Official Substack Logo */}
+            <a 
+              href="https://djsexpresso.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-black/30 text-express-purple hover:bg-express-purple hover:text-white transition-colors"
+              aria-label="Substack"
+            >
+              <SiSubstack size={16} /> {/* Substack icon is very vertical, 16px balances well */}
+            </a>
+
             <a 
               href="https://www.youtube.com/channel/UCHdP0ud0OwiA-mp6hU89QGA"
               target="_blank"

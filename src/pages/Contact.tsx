@@ -70,16 +70,20 @@ const Contact: React.FC = () => {
 
               {/* Quick Contact */}
               <div className="group bg-gradient-to-br from-express-purple/10 to-transparent backdrop-blur-sm border border-express-purple/30 rounded-2xl p-8 hover:border-express-purple/60 hover:shadow-lg hover:shadow-express-purple/20 transition-all duration-500">
-                <div className="text-center">
-                  <div className="bg-express-purple/20 p-3 rounded-full inline-block group-hover:bg-express-purple/30 transition-colors mb-4">
-                    <Mail className="text-express-purple" size={24} />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Quick Contact</h3>
-                  <p className="text-gray-300 text-sm">
-                    For immediate queries, reach out to our team leads directly.
-                  </p>
-                </div>
-              </div>
+  <div className="text-center">
+    <div className="bg-express-purple/20 p-3 rounded-full inline-block group-hover:bg-express-purple/30 transition-colors mb-4">
+      <Mail className="text-express-purple" size={24} />
+    </div>
+    <h3 className="text-xl font-bold text-white mb-2">Quick Contact</h3>
+    {/* Updated email section below */}
+    <a 
+      href="mailto:djsce.express@gmail.com" 
+      className="text-gray-300 text-sm hover:text-express-purple transition-colors duration-300"
+    >
+      djsce.express@gmail.com
+    </a>
+  </div>
+</div>
             </div>
 
             {/* Team Contacts - Middle Column */}

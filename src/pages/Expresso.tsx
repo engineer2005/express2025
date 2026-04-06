@@ -1,7 +1,6 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
-import { ChevronRight, BookOpen, ExternalLink } from 'lucide-react';
+import { ChevronRight, BookOpen, Download } from 'lucide-react';
 
 type Edition = {
   number: number;
@@ -71,16 +70,34 @@ const Expresso: React.FC = () => {
       number: 9,
       title: "Volume:-9",
       url: "https://drive.google.com/file/d/1ND1Qh5ft09XVUKmcVZ84rdCwSEdjwnmO/view?usp=sharing",
-      description: "Explore new narratives and ideas in our September issue."
+      description: "Explore new narratives and ideas in our October issue."
+    },
+    {
+      number: 10,
+      title: "Volume:-10",
+      url: "https://drive.google.com/file/d/1NykVTQmRxPRBcwS8K2b6JIHIjlsry9vI/view?usp=sharing",
+      description: "Fresh insights and stories from our March collection."
     }
   ];
 
-  const handleOpenEdition = (edition: Edition) => {
-    window.open(edition.url, "_blank");
+  // 1. Reverse the order
+  const reversedEditions = [...editions].reverse();
+
+  // 2. Robust Download Logic
+  const handleDownloadEdition = (url: string) => {
+    // Extracts the ID from the URL (the long string of gibberish)
+    const fileId = url.match(/[-\w]{25,}/);
+    if (fileId) {
+      // Direct "uc" (user content) download link works better for existing PDFs
+      const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId[0]}`;
+      window.open(downloadUrl, "_blank");
+    } else {
+      // Fallback to original URL if regex fails
+      window.open(url, "_blank");
+    }
   };
 
   const getEmbedUrl = (url: string): string => {
-    // Convert Google Drive view URL to embed URL
     return url.replace(/\/view\?usp=(sharing|drivesdk)/, "/preview");
   };
 
@@ -98,7 +115,7 @@ const Expresso: React.FC = () => {
           </p>
           
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {editions.map((edition) => (
+            {reversedEditions.map((edition) => (
               <div 
                 key={edition.number}
                 className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl overflow-hidden hover:border-express-purple/50 transition-all duration-300 group"
@@ -131,11 +148,11 @@ const Expresso: React.FC = () => {
                     </button>
                     
                     <button 
-                      onClick={() => handleOpenEdition(edition)}
+                      onClick={() => handleDownloadEdition(edition.url)}
                       className="sherlock-button group p-3 rounded-full"
-                      title="Open in Drive"
+                      title="Download PDF"
                     >
-                      <ExternalLink size={20} />
+                      <Download size={20} />
                     </button>
                   </div>
                 </div>

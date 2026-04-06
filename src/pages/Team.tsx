@@ -26,6 +26,7 @@ import s2 from '../images/s2.jpg'
 import j2 from '../images/j2.jpg'
 import mam from '../images/mam.jpeg'
 import place from '../images/place.jpg'
+import sakshi from '../images/sakshi.jpg'
 
 import teacher from '../images/teacher.jpg' 
 import { ZAxis } from 'recharts';
@@ -58,9 +59,9 @@ const Team: React.FC = () => {
   
   const viceChairpersons = [
     {
-      name: "Sakshi Gandhi",
+      name: "Sakshi Gandhi", // do this 
       role: "Vice Chairperson",
-      image: place, 
+      image: sakshi , 
     },
     {
       name: "Vidit Thakkar",
