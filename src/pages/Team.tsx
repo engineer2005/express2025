@@ -173,8 +173,7 @@ const Team: React.FC = () => {
       <div className="w-44 h-44 rounded-full overflow-hidden mb-5 border-3 border-express-purple/50 group-hover:border-express-purple transition-all">
         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
       </div>
-      <h3 className="text-xl font-playfair font-semibold text-white">
-      </h3>
+      <h3 className="text-xl font-playfair font-semibold text-white">{member.name}</h3>
       <p className="text-custom-white  mt-1 font-bold">{member.role}</p>
     </div>
   );
