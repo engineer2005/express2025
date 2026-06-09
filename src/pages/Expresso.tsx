@@ -83,6 +83,12 @@ const Expresso: React.FC = () => {
       title: "Volume:-11",
       url: "https://drive.google.com/file/d/1Yuc4DUWzsHC002iMhTv_I8wFGsZ_cmDe/view?usp=sharing",
       description: "Fresh insights and stories from our April collection."
+    },
+    {
+      number: 12,
+      title: "Volume:-12",
+      url: "https://drive.google.com/file/d/1ggPGEFmqS-ft5KtyPYqqamKg3MU2o7Ji/view?usp=sharing",
+      description: "Fresh insights and stories from our May collection."
     }
   ];
 
@@ -115,14 +121,14 @@ const Expresso: React.FC = () => {
           <h1 className="text-6xl md:text-7xl font-bold text-express-purple mb-8 font-playfair">
             eXpresso
           </h1>
-          
+
           <p className="text-xl text-center text-gray-300 max-w-2xl mx-auto mb-12">
             Our literary magazine featuring articles, stories, poems, and insights about public speaking, debating, and communication skills.
           </p>
-          
+
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {reversedEditions.map((edition) => (
-              <div 
+              <div
                 key={edition.number}
                 className="bg-black/30 backdrop-blur-sm border border-express-purple/20 rounded-xl overflow-hidden hover:border-express-purple/50 transition-all duration-300 group"
               >
@@ -133,15 +139,15 @@ const Expresso: React.FC = () => {
                       Edition {edition.number}
                     </span>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{edition.description}</p>
-                  
+
                   <div className="flex gap-4 justify-center">
-                    <button 
+                    <button
                       onClick={() => {
                         setSelectedEdition(edition);
                         setTimeout(() => {
-                          previewRef.current?.scrollIntoView({ 
+                          previewRef.current?.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
                           });
@@ -152,8 +158,8 @@ const Expresso: React.FC = () => {
                     >
                       <BookOpen size={20} />
                     </button>
-                    
-                    <button 
+
+                    <button
                       onClick={() => handleDownloadEdition(edition.url)}
                       className="sherlock-button group p-3 rounded-full"
                       title="Download PDF"
@@ -165,14 +171,14 @@ const Expresso: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           {selectedEdition && (
             <div ref={previewRef} className="w-full">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-express-purple">
                   Previewing: {selectedEdition.title}
                 </h2>
-                <button 
+                <button
                   onClick={() => setSelectedEdition(null)}
                   className="text-white/70 hover:text-white"
                 >
@@ -180,8 +186,8 @@ const Expresso: React.FC = () => {
                 </button>
               </div>
               <div className="w-full h-[70vh] rounded-xl overflow-hidden border border-express-purple/30">
-                <iframe 
-                  src={getEmbedUrl(selectedEdition.url)} 
+                <iframe
+                  src={getEmbedUrl(selectedEdition.url)}
                   title={`eXpresso ${selectedEdition.title}`}
                   className="w-full h-full"
                   allow="autoplay"
